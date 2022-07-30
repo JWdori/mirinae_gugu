@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "272098650606",
+    "firebase_url": "https://gugu-32083-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "gugu-32083",
+    "storage_bucket": "gugu-32083.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272098650606:android:02d63027b1674de10b46ff",
+        "android_client_info": {
+          "package_name": "com.mirinae_gugu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272098650606-1o2a2hfqnrnke1thu6o1cdo5jmr31b8u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPJjKUQMGyEqbZOOdYrNTWHwH7ni-OWMk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272098650606-1o2a2hfqnrnke1thu6o1cdo5jmr31b8u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
