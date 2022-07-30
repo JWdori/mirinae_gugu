@@ -1,6 +1,6 @@
-# mirinae_gugu
+# 구구절절 - 구화 교육 애플리케이션
 
-A new Flutter project.
+2022-07-30 커밋 초기화
 
 ## Getting Started
 
