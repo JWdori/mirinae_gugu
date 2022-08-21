@@ -1,0 +1,153 @@
+1. cupertino_icons: ^1.0.2
+The MIT License (MIT)
+Copyright (c) 2016 Vladimir Kharlampidi
+https://github.com/flutter/packages/tree/main/third_party/packages/cupertino_icons
+
+2. provider: ^6.0.0
+MIT License
+Copyright (c) 2019 Remi Rousselet
+https://github.com/rrousselGit/provider
+
+3. carousel_slider: ^4.0.0
+MIT License
+Copyright (c) 2017 serenader
+https://github.com/serenader2014/flutter_carousel_slider
+
+4. rxdart: ^0.27.2
+Apache License
+Copyright (c) 2016 frankpepermans
+https://github.com/ReactiveX/rxdart
+
+5. font_awesome_flutter: ^9.1.0
+MIT License
+Copyright (c) 2017 Brian Egan
+Copyright (c) 2020 Michael Spiss
+https://github.com/fluttercommunity/font_awesome_flutter
+
+6. shared_preferences: ^2.0.7
+3-Clause BSD License
+Copyright 2013 The Flutter Authors. All rights reserved.
+https://github.com/flutter/plugins/tree/main/packages/shared_preferences/shared_preferences
+
+7. flutter_signin_button: ^2.0.0
+MIT License
+
+Copyright (C) 2018, Zayn Jarvis
+https://github.com/ZaynJarvis/Flutter-Sign-in-Button
+
+8. image_picker: ^0.7.0
+Apache-2.0, BSD-3-Clause
+Copyright 2013 The Flutter Authors. All rights reserved.
+https://github.com/flutter/plugins/tree/main/packages/image_picker/image_picker
+
+9. path_provider: ^2.0.1
+BSD-3-Clause
+Copyright 2013 The Flutter Authors. All rights reserved.
+https://github.com/flutter/plugins/tree/main/packages/path_provider/path_provider
+
+10. sizer: ^2.0.15
+MIT License
+Copyright (c) 2019 Prashant Padmani
+https://github.com/TechnoUrmish/Sizer
+
+11. fluttertoast: ^8.0.8
+MIT License
+Copyright (c) 2020 Karthik Ponnam
+https://github.com/PonnamKarthik/FlutterToast
+
+12. get: 3.24.0
+MIT License
+Copyright (c) 2019 Jonny Borges
+https://github.com/jonataslaw/getx
+
+13. flutter_svg: ^0.19.1
+MIT License
+Copyright (c) 2018 Dan Field
+https://github.com/dnfield/flutter_svg
+
+14. intl: ^0.17.0
+BSD-3-Clause
+Copyright 2013, the Dart project authors. All rights reserved.
+https://github.com/dart-lang/intl
+
+15. youtube_player_flutter: ^8.0.0
+BSD-2-Clause
+Copyright 2021 Sarbagya Dhaubanjar. All rights reserved.
+https://github.com/sarbagyastha/youtube_player_flutter/tree/master/packages/youtube_player_flutter
+
+16. cached_network_image: ^3.1.0
+The MIT License (MIT)
+Copyright (c) 2018 Rene Floor
+https://github.com/Baseflow/flutter_cached_network_image
+
+17. camera: ^0.9.2
+BSD-3-Clause
+Copyright 2013 The Flutter Authors. All rights reserved.
+https://github.com/flutter/plugins/tree/main/packages/camera/camera
+
+18. google_speech: ^2.0.1
+MIT License
+Copyright (c) 2020 Felix Junghans
+https://pub.dev/packages/google_speech/license
+
+19. sound_stream:
+GPL-3.0
+Copyright (C) 2007 Free Software Foundation, Inc.
+https://github.com/CasperPas/flutter-sound-stream
+
+20. audioplayers: ^0.19.1
+MIT License
+Copyright (c) 2017 Luan Nico
+https://github.com/bluefireteam/audioplayers
+
+21. flutter_animation_progress_bar: ^2.0.1
+BSD-3-Clause
+BSD 3-Clause License
+Copyright (c) 2019, Kris Luu <khoa.luu@vnappmob.com>
+All rights reserved.
+https://github.com/ltdangkhoa/Flutter-Animation-Progress-Bar
+
+22. noise_meter: ^3.0.2
+MIT License.
+
+Copyright 2019 Copenhagen Center for Health Technology (CACHET) at the Technical University of Denmark (DTU)
+https://github.com/cph-cachet/flutter-plugins/tree/master/packages/noise_meter
+
+23. share: ^2.0.4
+Copyright 2013 The Flutter Authors. All rights reserved.
+https://github.com/flutter/plugins
+
+24. flutter_inappwebview: ^5.3.2
+Apache License
+Copyright 2018-2020 Lorenzo Pichilli
+https://github.com/pichillilorenzo/flutter_inappwebview
+
+25. flutter_audio_recorder:
+MIT License
+Copyright (c) 2019 ZENO Group
+https://github.com/rmbrone/flutter_audio_recorder
+
+26. permission_handler:
+MIT License
+Copyright (c) 2018 Baseflow
+https://github.com/baseflow/flutter-permission-handler
+
+27. storage_path:
+BSD-3-Clause
+Copyright (c) 2019, Vivek Sharma
+https://github.com/follow2vivek/StoragePath
+
+28. flutter_screenutil: ^5.0.2
+Apache License
+Copyright 2018 lizhuoyuan
+https://github.com/OpenFlutter/flutter_screenutil/blob/master/LICENSE
+
+29. flutter_switch: ^0.3.2
+BSD-3-Clause
+Copyright (c) 2020, Nichole John Romero
+https://github.com/boringdeveloper/FlutterSwitch
+
+30. introduction_screen: ^2.1.0
+MIT License
+Copyright (c) 2019 Jean-Charles Moussé
+https://github.com/pyozer/introduction_screen
