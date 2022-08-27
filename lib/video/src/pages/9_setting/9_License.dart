@@ -2,183 +2,93 @@
 
 const List license_short = [
 
-'''
-  1. cupertino_icons: ^1.0.2
-  The MIT License (MIT)
-  Copyright (c) 2016 Vladimir Kharlampidi
-  https://github.com/flutter/packages/tree/main/third_party/packages/cupertino_icons'''
+'''1. cupertino_icons: ^1.0.2'''
 ,
 
 '''
-  2. provider: ^6.0.0
-  MIT License
-  Copyright (c) 2019 Remi Rousselet
-  https://github.com/rrousselGit/provider'''
+2. provider: ^6.0.0'''
 ,
 
-'''3. carousel_slider: ^4.0.0
-  MIT License
-  Copyright (c) 2017 serenader
-  https://github.com/serenader2014/flutter_carousel_slider'''
+'''
+3. carousel_slider: ^4.0.0'''
 ,
-  '''4. rxdart: ^0.27.2
-  Apache License
-  Copyright (c) 2016 frankpepermans
-  https://github.com/ReactiveX/rxdart'''
+'''4. rxdart: ^0.27.2'''
 ,
 
-  '''5. font_awesome_flutter: ^9.1.0
-  MIT License
-  Copyright (c) 2017 Brian Egan
-  Copyright (c) 2020 Michael Spiss
-  https://github.com/fluttercommunity/font_awesome_flutter'''
+'''5. font_awesome_flutter: ^9.1.0'''
 ,
-  '''6. shared_preferences: ^2.0.7
-  3-Clause BSD License
-  Copyright 2013 The Flutter Authors. All rights reserved.
-  https://github.com/flutter/plugins/tree/main/packages/shared_preferences/shared_preferences'''
+'''6. shared_preferences: ^2.0.7'''
 ,
 
-  '''7. flutter_signin_button: ^2.0.0
-  MIT License
-  Copyright (C) 2018, Zayn Jarvis
-  https://github.com/ZaynJarvis/Flutter-Sign-in-Button'''
+'''7. flutter_signin_button: ^2.0.0'''
 ,
 
-  '''8. image_picker: ^0.7.0
-  Apache-2.0, BSD-3-Clause
-  Copyright 2013 The Flutter Authors. All rights reserved.
-  https://github.com/flutter/plugins/tree/main/packages/image_picker/image_picker'''
+'''8. image_picker: ^0.7.0'''
 ,
 
-  '''9. path_provider: ^2.0.1
-  BSD-3-Clause License
-  Copyright 2013 The Flutter Authors. All rights reserved.
-  https://github.com/flutter/plugins/tree/main/packages/path_provider/path_provider'''
+'''9. path_provider: ^2.0.1'''
 ,
 
-  '''10. sizer: ^2.0.15
-  MIT License
-  Copyright (c) 2019 Prashant Padmani
-  https://github.com/TechnoUrmish/Sizer'''
+'''10. sizer: ^2.0.15'''
 ,
 
-  '''11. fluttertoast: ^8.0.8
-  MIT License
-  Copyright (c) 2020 Karthik Ponnam
-  https://github.com/PonnamKarthik/FlutterToast'''
+'''11. fluttertoast: ^8.0.8'''
 ,
 
-  '''12. get: 3.24.0
-  MIT License
-  Copyright (c) 2019 Jonny Borges
-  https://github.com/jonataslaw/getx'''
+'''12. get: 3.24.0'''
 ,
 
-  '''13. flutter_svg: ^0.19.1
-  MIT License
-  Copyright (c) 2018 Dan Field
-  https://github.com/dnfield/flutter_svg'''
+'''13. flutter_svg: ^0.19.1'''
 ,
 
-  '''14. intl: ^0.17.0
-  BSD-3-Clause License
-  Copyright 2013, the Dart project authors. All rights reserved.
-  https://github.com/dart-lang/intl'''
+'''14. intl: ^0.17.0'''
 ,
 
-  '''15. youtube_player_flutter: ^8.0.0
-  BSD-2-Clause License
-  Copyright 2021 Sarbagya Dhaubanjar. All rights reserved.
-  https://github.com/sarbagyastha/youtube_player_flutter/tree/master/packages/youtube_player_flutter'''
+'''15. youtube_player_flutter: ^8.0.0'''
 ,
 
-  '''16. cached_network_image: ^3.1.0
-  The MIT License (MIT)
-  Copyright (c) 2018 Rene Floor
-  https://github.com/Baseflow/flutter_cached_network_image'''
+'''16. cached_network_image: ^3.1.0'''
 ,
 
-  '''17. camera: ^0.9.2
-  BSD-3-Clause
-  Copyright 2013 The Flutter Authors. All rights reserved.
-  https://github.com/flutter/plugins/tree/main/packages/camera/camera'''
+'''17. camera: ^0.9.2'''
 ,
 
-  '''18. google_speech: ^2.0.1
-  MIT License
-  Copyright (c) 2020 Felix Junghans
-  https://pub.dev/packages/google_speech/license'''
+'''18. google_speech: ^2.0.1'''
 ,
 
-  '''19. sound_stream:
-  GPL-3.0 License
-  Copyright (C) 2007 Free Software Foundation, Inc.
-  https://github.com/CasperPas/flutter-sound-stream'''
+'''19. sound_stream'''
 ,
 
-  '''20. audioplayers: ^0.19.1
-  MIT License
-  Copyright (c) 2017 Luan Nico
-  https://github.com/bluefireteam/audioplayers'''
+'''20. audioplayers: ^0.19.1'''
 ,
 
-  '''21. flutter_animation_progress_bar: ^2.0.1
-  BSD 3-Clause License
-  Copyright (c) 2019, Kris Luu <khoa.luu@vnappmob.com> All rights reserved.
-  https://github.com/ltdangkhoa/Flutter-Animation-Progress-Bar'''
+'''21. flutter_animation_progress_bar: ^2.0.1'''
 ,
 
-  '''22. noise_meter: ^3.0.2
-  MIT License.
-  Copyright 2019 Copenhagen Center for Health Technology (CACHET) at the Technical University of Denmark (DTU)
-  https://github.com/cph-cachet/flutter-plugins/tree/master/packages/noise_meter'''
+'''22. noise_meter: ^3.0.2'''
 ,
 
-  '''23. share: ^2.0.4
-  Copyright 2013 The Flutter Authors. All rights reserved.
-  https://github.com/flutter/plugins'''
+'''23. share: ^2.0.4'''
 ,
 
-  '''24. flutter_inappwebview: ^5.3.2
-  Apache License
-  Copyright 2018-2020 Lorenzo Pichilli
-  https://github.com/pichillilorenzo/flutter_inappwebview'''
+'''24. flutter_inappwebview: ^5.3.2'''
 ,
 
-  '''25. flutter_audio_recorder:
-  MIT License
-  Copyright (c) 2019 ZENO Group
-  https://github.com/rmbrone/flutter_audio_recorder'''
+'''25. flutter_audio_recorder'''
 ,
 
-  '''26. permission_handler:
-  MIT License
-  Copyright (c) 2018 Baseflow
-  https://github.com/baseflow/flutter-permission-handler'''
+'''26. permission_handler'''
 ,
 
-  '''27. storage_path:
-  BSD-3-Clause License
-  Copyright (c) 2019, Vivek Sharma
-  https://gi''thub.com/follow2vivek/StoragePath'''
+'''27. storage_path'''
 ,
 
-  '''28. flutter_screenutil: ^5.0.2
-  Apache License
-  Copyright 2018 lizhuoyuan
-  https://github.com/OpenFlutter/flutter_screenutil/blob/master/LICENSE'''
+'''28. flutter_screenutil: ^5.0.2'''
 ,
-  '''29. flutter_switch: ^0.3.2
-  BSD-3-Clause License
-  Copyright (c) 2020, Nichole John Romero
-  https://github.com/boringdeveloper/FlutterSwitch'''
+'''29. flutter_switch: ^0.3.2'''
 ,
 
-  '''30. introduction_screen: ^2.1.0
-  MIT License
-  Copyright (c) 2019 Jean-Charles Moussé
-  https://github.com/pyozer/introduction_screen'''
+'''30. introduction_screen: ^2.1.0'''
 
 ];
 
@@ -203,7 +113,10 @@ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
 FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'''
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Hompage: https://github.com/flutter/packages/tree/main/third_party/packages/cupertino_icons
+'''
 ,
 
 '''MIT License
@@ -226,7 +139,10 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://github.com/rrousselGit/provider
+'''
 ,
 
 '''
@@ -250,10 +166,15 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://github.com/serenader2014/flutter_carousel_slider
+'''
 ,
 
 '''
+Apache License
+
 Copyright (c) 2016 frankpepermans
 
 Licensed under the Apache License, Version 2.0 (the "License"); you
@@ -266,7 +187,10 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
 implied. See the License for the specific language governing permissions
-and limitations under the License.'''
+and limitations under the License.
+
+Homepage: https://github.com/ReactiveX/rxdart
+'''
 ,
 
 '''
@@ -274,6 +198,7 @@ MIT License
 
 Copyright (c) 2017 Brian Egan
 Copyright (c) 2020 Michael Spiss
+
 Font Awesome Icons by @fontawesome - https://fontawesome.com
 License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1)
 
@@ -293,10 +218,15 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://github.com/fluttercommunity/font_awesome_flutter
+'''
 ,
 
 '''
+3-Clause BSD License
+
 Copyright 2013 The Flutter Authors. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -321,10 +251,15 @@ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
 LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Homepage: https://github.com/flutter/plugins/tree/main/packages/shared_preferences/shared_preferences
+'''
 ,
 
 '''
+MIT License
+
 Copyright (C) 2018, Zayn Jarvis
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -343,11 +278,14 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://github.com/ZaynJarvis/Flutter-Sign-in-Button
+'''
 ,
 
 '''
-image_picker
+Apache-2.0, BSD-3-Clause License
 
 Copyright 2013 The Flutter Authors. All rights reserved.
 
@@ -578,10 +516,14 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+Homepage: https://github.com/flutter/plugins/tree/main/packages/image_picker/image_picker
 '''
 ,
 
 '''
+BSD-3-Clause License
+
 Copyright 2013 The Flutter Authors. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -606,7 +548,10 @@ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
 LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Homepage: https://github.com/flutter/plugins/tree/main/packages/path_provider/path_provider
+'''
 ,
 
 '''
@@ -630,7 +575,10 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://github.com/TechnoUrmish/Sizer
+'''
 ,
 
 '''
@@ -654,7 +602,10 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://github.com/PonnamKarthik/FlutterToast
+'''
 ,
 
 '''
@@ -678,10 +629,15 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://github.com/jonataslaw/getx
+'''
 ,
 
 '''
+MIT License
+
 Copyright (c) 2018 Dan Field
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -700,11 +656,17 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://github.com/dnfield/flutter_svg
+'''
 ,
 
 '''
+BSD-3-Clause License
+
 Copyright 2013, the Dart project authors. All rights reserved.
+
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
 met:
@@ -729,11 +691,16 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
 DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Homepage: https://github.com/dart-lang/intl
+'''
 ,
 
 
 '''
+BSD-2-Clause License
+
 Copyright 2021 Sarbagya Dhaubanjar. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -755,7 +722,10 @@ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
 LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Homepage: https://github.com/sarbagyastha/youtube_player_flutter/tree/master/packages/youtube_player_flutter
+'''
 ,
 
 '''
@@ -779,10 +749,15 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://github.com/Baseflow/flutter_cached_network_image
+'''
 ,
 
 '''
+BSD-3-Clause License
+
 Copyright 2013 The Flutter Authors. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -807,7 +782,10 @@ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
 LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Homepage: https://github.com/flutter/plugins/tree/main/packages/camera/camera
+'''
 ,
 
 '''
@@ -831,11 +809,15 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://pub.dev/packages/google_speech/license
+'''
 ,
 
 '''
 GNU GENERAL PUBLIC LICENSE
+
 Version 3, 29 June 2007
 
 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
@@ -1508,7 +1490,10 @@ into proprietary programs.  If your program is a subroutine library, you
 may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
-<https://www.gnu.org/licenses/why-not-lgpl.html>.'''
+<https://www.gnu.org/licenses/why-not-lgpl.html>.
+
+Homepage: https://github.com/CasperPas/flutter-sound-stream
+'''
 ,
 
 '''
@@ -1532,7 +1517,10 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://github.com/bluefireteam/audioplayers
+'''
 ,
 
 '''
@@ -1564,7 +1552,10 @@ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
 SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Homepage: https://github.com/ltdangkhoa/Flutter-Animation-Progress-Bar
+'''
 ,
 
 '''
@@ -1584,10 +1575,15 @@ THE SOFTWARE IS PROVIDED ”AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
 THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
 CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-IN THE SOFTWARE.'''
+IN THE SOFTWARE.
+
+Homepage: https://github.com/cph-cachet/flutter-plugins/tree/master/packages/noise_meter
+'''
 ,
 
 '''
+MIT License
+
 Copyright 2013 The Flutter Authors. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -1612,11 +1608,17 @@ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
 LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Homepage: https://github.com/flutter/plugins
+'''
 ,
 
 '''
 Apache License
+
+Copyright 2018-2020 Lorenzo Pichilli
+
 Version 2.0, January 2004
 http://www.apache.org/licenses/
 
@@ -1805,7 +1807,10 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License.'''
+limitations under the License.
+
+Homepage: https://github.com/pichillilorenzo/flutter_inappwebview
+'''
 ,
 
 '''
@@ -1829,7 +1834,10 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://github.com/rmbrone/flutter_audio_recorder
+'''
 ,
 
 '''
@@ -1853,7 +1861,10 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://github.com/baseflow/flutter-permission-handler
+'''
 ,
 
 '''
@@ -1885,7 +1896,10 @@ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
 SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Homepage: https://github.com/follow2vivek/StoragePath
+'''
 ,
 
 '''
@@ -1901,7 +1915,10 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License.'''
+limitations under the License.
+
+Homepage: https://github.com/OpenFlutter/flutter_screenutil/blob/master/LICENSE
+'''
 ,
 
 '''
@@ -1933,11 +1950,12 @@ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
 SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.'''
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Homepage: https://github.com/boringdeveloper/FlutterSwitch
+'''
 ,
-
-
-    '''
+'''
 MIT License
 
 Copyright (c) 2019 Jean-Charles Moussé
@@ -1958,6 +1976,9 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.'''
+SOFTWARE.
+
+Homepage: https://github.com/pyozer/introduction_screen
+'''
 
 ];

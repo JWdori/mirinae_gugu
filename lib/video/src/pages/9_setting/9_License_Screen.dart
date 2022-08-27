@@ -15,15 +15,12 @@ class License_Screen extends State<License> {
   static const List short_list = license_short;
   static const List long_list = license_long;
 
-
-
   final List<Map<String, dynamic>> _items = List.generate(
       30,
           (index) => {
         "id": index,
         "title": short_list[index],
         "content": long_list[index]
-
       });
 
   @override
@@ -38,25 +35,37 @@ class License_Screen extends State<License> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
         appBar: DefaultAppBar(title: '오픈소스 라이선스'),
-        body: ListView.builder(
-            itemCount: _items.length,
-            itemBuilder: (_, index) {
-              final item = _items[index];
-              return Card(
+        body: Container (
+            padding: const EdgeInsets.all(15),
+            alignment: Alignment.topCenter,
+            child: ListView.builder(
+                itemCount: _items.length,
+                itemBuilder: (_, index) {
+                  final item = _items[index];
+                  return Card(
                 // this key is required to save and restore ExpansionTile expanded state
                 key: PageStorageKey(item['id']),
-                color: Colors.amber.shade200,
+                color: Colors.white,
                 elevation: 4,
+                margin: EdgeInsets.symmetric(vertical: 7, horizontal: 0),
+                shape: RoundedRectangleBorder(
+                    side:  BorderSide(color: Colors.black,width: 1),
+                    borderRadius: BorderRadius.all(Radius.circular(9))
+                ),
                 child: ExpansionTile(
-                  trailing: Icon(Icons.menu),
-                  controlAffinity: ListTileControlAffinity.leading,
+                  tilePadding: EdgeInsets.symmetric(horizontal: 17),
                   childrenPadding:
-                  const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  const EdgeInsets.symmetric(vertical: 7, horizontal: 20),
                   expandedCrossAxisAlignment: CrossAxisAlignment.end,
                   maintainState: true,
                   title: Text(item['title']),
                   // contents
+                  // trailing: Icon(
+                  //   Icons.add_rounded,
+                  //   // color: Colors.,
+                  // ),
                   children: [
                     Text(item['content']),
                     // This button is used to remove this item
@@ -64,7 +73,8 @@ class License_Screen extends State<License> {
                   ],
                 ),
               );
-            }));
+            })
+        ));
 
   }
 
