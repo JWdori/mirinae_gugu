@@ -15,6 +15,7 @@ import 'package:sound_stream/sound_stream.dart';
 
 import '../../1_Loading.dart';
 import '5_1pageview.dart';
+import '5_1_pageview_man.dart';
 
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
@@ -145,6 +146,9 @@ class _video_Body extends State<video_Body> {
     "29. 칠판",
     "30. 학년"
   ];
+
+  // woman -> man
+
 
   //record
   late Directory? appDir;
@@ -390,9 +394,20 @@ class _video_Body extends State<video_Body> {
   }
   var height2 = AppBar().preferredSize.height;
   bool val = false;
+
+  // woman -> man
+  bool switch_man = false;
+
   onChangeMethod(bool newValue){
     setState(() {
       val=newValue;
+      print(newValue);
+    });
+  }
+
+  onChangeMethod_man(bool newValue){
+    setState(() {
+      switch_man = newValue;
       print(newValue);
     });
   }
@@ -480,7 +495,31 @@ child: Semantics(
                           });
                         },
                       ),
+                    ),
+                    Semantics(
+                      label: "남자 전원 버튼",
+                      child: FlutterSwitch(
+                        activeText: "여자 on",
+                        inactiveText: "남자 on",
+                        activeColor: Colors.blue,
+                        value: switch_man,
+                        valueFontSize: 11.0.sp,
+                        inactiveTextColor: Colors.black87,
+                        inactiveToggleColor: Colors.white70,
+                        activeTextColor:Colors.white,
+                        inactiveTextFontWeight: FontWeight.w500,
+                        activeTextFontWeight: FontWeight.w500,
+                        width: 85.w,
+                        borderRadius: 30.0,
+                        showOnOff: true,
+                        onToggle: (switch_man) {
+                          setState(() {
+                            switch_man = onChangeMethod_man(switch_man);
+                          });
+                        },
+                      ),
                     )
+
                   ],
 
                 )
@@ -520,8 +559,14 @@ child: Semantics(
                               controller: _pageController,
                               onPageChanged: updateTheQnNum,
                               itemCount: 30,
-                              itemBuilder: (context, index) => video_page(
+                              itemBuilder: (context, index) => (
+                                  switch_man == true
+                                  ? video_page_man(
                                 id: widget.index,
+                              )
+                                  : video_page(
+                                id: widget.index,
+                              )
                               ),
                             ),
                             //child: youtube(context),
