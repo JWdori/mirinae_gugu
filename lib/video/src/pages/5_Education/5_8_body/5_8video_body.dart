@@ -224,6 +224,7 @@ class _video_Body extends State<video_Body_8> {
       await _recorder.start();
       if (!mounted) return;
       setState(() {
+        Fluttertoast.showToast(msg: "받아쓰기 시작");
         recognizing = true;
       });
 
@@ -283,6 +284,7 @@ class _video_Body extends State<video_Body_8> {
     if (!mounted) return;
     setState(() {
       recognizing = false;
+      Fluttertoast.showToast(msg: "받아쓰기 중지");
     });
 
   }
