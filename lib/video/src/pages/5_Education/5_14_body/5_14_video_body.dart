@@ -8,6 +8,8 @@ import 'package:flutter_switch/flutter_switch.dart';
 import 'package:google_speech/google_speech.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
+import 'package:mirinae_gugu/video/src/pages/5_Education/5_14_body/5_14_pageview.dart';
+
 import 'package:mirinae_gugu/video/src/pages/noise_meter.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -22,8 +24,7 @@ import 'package:mirinae_gugu/video/src/pages/6_record/6_audio_recorder.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import '5_11_pageview.dart';
-import '5_11_pageview_man.dart';
+
 
 
 class video_Body extends StatefulWidget {
@@ -117,36 +118,37 @@ class _video_Body extends State<video_Body> {
   BehaviorSubject<List<int>>? _audioStream;
   late bool favoriteButton_0_01_01 = false;
   List<String> Questiontitle = [
-  '1. 화재',
-  '2. 하얗다',
-  '3. 폭설',
-  '4. 춥다',
-  '5. 추위',
-  '6. 장갑',
-  '7. 입김',
-  '8. 영하',
-  '9. 얼음',
-  '10. 썰매',
-  '11. 스키',
-  '12. 손난로',
-  '13. 성탄절',
-  '14. 설날',
-  '15. 새해',
-  '16. 붕어빵',
-  '17. 바람',
-  '18. 목도리',
-  '19. 떡국',
-  '20. 동상',
-  '21. 담요',
-  '22. 눈싸움',
-  '23. 눈사람',
-  '24. 눈꽃',
-  '25. 내복',
-  '26. 난방',
-  '27. 귤',
-  '28. 귀마개',
-  '29.굴뚝',
-  '30. 고드름',
+    '1. 가격이 얼마에요?',
+    '2. 강아지가 귀여워요',
+    '3. 공부하고 있어요',
+    '4. 궁금한 점이 하나 있어요',
+    '5. 기다리고 있을게',
+    '6. 날씨가 좋네요',
+    '7. 내 취미는 운동이야',
+    '8. 노래가 정말 좋네요',
+    '9. 다음에 봬요',
+    '10. 다행히 큰 문제 없어',
+    '11. 도와줘서 고마워',
+    '12. 뒤에 일정이 있습니다',
+    '13. 뜨거우니 조심하세요',
+    '14. 도서관 가는 중이야',
+    '15. 머리가 아파',
+    '16. 무슨 일이야?',
+    '17. 문제가 어렵네',
+    '18. 물 마실래?',
+    '19. 뭐하고 있어?',
+    '20. 만나서 반갑습니다',
+    '21. 바빠서 안될 것 같아',
+    '22. 방금 밥 먹었어요',
+    '23. 밥이 정말 맛있어요',
+    '24. 방금 일어났어',
+    '25. 부모님이랑 같이 있어',
+    '26. 부재중입니다',
+    '27. 빌릴 수 있을가요',
+    '28. 산책 중이야',
+    '29. 생일 축하해',
+    '30. 새해 복 많이 받으세요'
+
 
   ];
 
@@ -549,11 +551,12 @@ class _video_Body extends State<video_Body> {
                               onPageChanged: updateTheQnNum,
                               itemCount: 30,
                               itemBuilder: (context, index) => (
-                                  switch_man == true
-                                      ? video_page_man(
-                                    id: widget.index,
-                                  )
-                                      : video_page(
+                                  // switch_man == true
+                                  //     ? video_page_man(
+                                  //   id: widget.index,
+                                  // )
+                                  //     :
+                                  video_page(
                                     id: widget.index,
                                   )
                               ),

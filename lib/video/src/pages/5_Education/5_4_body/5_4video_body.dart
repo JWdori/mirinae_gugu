@@ -478,8 +478,8 @@ class _video_Body extends State<video_Body_4> {
                     Semantics(
                       label: "남자 전원 버튼",
                       child: FlutterSwitch(
-                        activeText: "여자 on",
-                        inactiveText: "남자 on",
+                        activeText: "남자",
+                        inactiveText: "여자",
                         activeColor: Colors.blue,
                         value: switch_man,
                         valueFontSize: 13.0.sp,
