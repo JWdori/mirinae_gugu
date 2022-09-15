@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:mirinae_gugu/video/src/pages/1_Loading.dart';
 import 'package:mirinae_gugu/video/src/pages/9_setting/9_Walkthrough.dart';
-
+import 'package:mirinae_gugu/video/src/pages/9_setting/9_License_Screen.dart';
 
 import '9_FontSize.dart';
 import '9_Fontchoose.dart';
@@ -68,6 +68,8 @@ class _Setting extends State<Setting>{
             buildcontact(context, "개발자 연락처"),
             SizedBox(height: 1.h,),
             buildAccountOption2(context, "버전 정보"),
+            SizedBox(height: 1.h,),
+            buildLicense(context, "라이선스"),
 
             SizedBox(height: 5.h,),
             Row(
@@ -367,6 +369,42 @@ GestureDetector buildfontchoose(BuildContext context, String title)
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30), //모서리를 둥글게
                 border: Border.all(color: Colors.black12, width: 3)), //테두리
+            child: Padding(
+              padding: EdgeInsets.only(left:5,right: 5),
+              child: Text("상세 보기",textScaleFactor: 1.0,style: TextStyle(
+                color: Colors.black54,
+                fontWeight: FontWeight.w600,
+                fontSize: 14.sp+size,
+              ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget buildLicense(BuildContext context, String title)
+{
+  return InkWell(
+    onTap: (){
+      Navigator.push(context, MaterialPageRoute(builder: (context) => License()));
+    },
+    child: Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8,horizontal: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(title,style: TextStyle(
+            fontSize: 14.sp+size,
+            fontWeight: FontWeight.w600,
+          ),),
+          Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30), //모서리를 둥글게
+                border: Border.all(color: Colors.black12, width: 3)), //테두리
+            //Colors.black12
             child: Padding(
               padding: EdgeInsets.only(left:5,right: 5),
               child: Text("상세 보기",textScaleFactor: 1.0,style: TextStyle(

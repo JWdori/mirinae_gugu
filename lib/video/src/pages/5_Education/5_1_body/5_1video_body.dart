@@ -15,6 +15,7 @@ import 'package:sound_stream/sound_stream.dart';
 
 import '../../1_Loading.dart';
 import '5_1pageview.dart';
+import '5_1_pageview_man.dart';
 
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
@@ -146,6 +147,9 @@ class _video_Body extends State<video_Body> {
     "30. 학년"
   ];
 
+  // woman -> man
+
+
   //record
   late Directory? appDir;
 
@@ -234,6 +238,7 @@ class _video_Body extends State<video_Body> {
       if (!mounted) return;
       setState(() {
         recognizing = true;
+        Fluttertoast.showToast(msg: "받아쓰기 시작");
       });
 
 
@@ -292,6 +297,7 @@ class _video_Body extends State<video_Body> {
     if (!mounted) return;
     setState(() {
       recognizing = false;
+      Fluttertoast.showToast(msg: "받아쓰기 중지");
     });
 
   }
@@ -390,9 +396,20 @@ class _video_Body extends State<video_Body> {
   }
   var height2 = AppBar().preferredSize.height;
   bool val = false;
+
+  // woman -> man
+  bool switch_man = false;
+
   onChangeMethod(bool newValue){
     setState(() {
       val=newValue;
+      print(newValue);
+    });
+  }
+
+  onChangeMethod_man(bool newValue){
+    setState(() {
+      switch_man = newValue;
       print(newValue);
     });
   }
@@ -417,6 +434,7 @@ child: Semantics(
       );
     }
   }
+
   @override
   Widget build(BuildContext context) {
     saved();
@@ -480,7 +498,31 @@ child: Semantics(
                           });
                         },
                       ),
+                    ),
+                    Semantics(
+                      label: "남자 전원 버튼",
+                      child: FlutterSwitch(
+                        activeText: "여자 on",
+                        inactiveText: "남자 on",
+                        activeColor: Colors.blue,
+                        value: switch_man,
+                        valueFontSize: 11.0.sp,
+                        inactiveTextColor: Colors.black87,
+                        inactiveToggleColor: Colors.white70,
+                        activeTextColor:Colors.white,
+                        inactiveTextFontWeight: FontWeight.w500,
+                        activeTextFontWeight: FontWeight.w500,
+                        width: 85.w,
+                        borderRadius: 30.0,
+                        showOnOff: true,
+                        onToggle: (switch_man) {
+                          setState(() {
+                            switch_man = onChangeMethod_man(switch_man);
+                          });
+                        },
+                      ),
                     )
+
                   ],
 
                 )
@@ -520,8 +562,14 @@ child: Semantics(
                               controller: _pageController,
                               onPageChanged: updateTheQnNum,
                               itemCount: 30,
-                              itemBuilder: (context, index) => video_page(
+                              itemBuilder: (context, index) => (
+                                  switch_man == true
+                                  ? video_page_man(
                                 id: widget.index,
+                              )
+                                  : video_page(
+                                id: widget.index,
+                              )
                               ),
                             ),
                             //child: youtube(context),
@@ -703,10 +751,9 @@ child: Semantics(
             IconButton(
               padding: EdgeInsets.only(bottom: 3,),
               onPressed: recognizing ? stopRecording : streamingRecognize,
-              icon: recognizing
-                  ? Icon(Icons.mic, color: Colors.red, size: 28)
-                  : Icon(Icons.mic, color: Colors.blue, size: 28),
-            ),
+              icon: recognizing ? Icon(Icons.mic, color: Colors.red, size: 28)
+                                : Icon(Icons.mic, color: Colors.blue, size: 28)),
+
             Padding(
               padding: EdgeInsets.only(bottom: 3),
               child: Text("받아쓰기", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
@@ -723,10 +770,11 @@ child: Semantics(
               IconButton(
                 padding: EdgeInsets.only(bottom: 3,),
                 onPressed: () async {
-
                   await _onRecordButtonPressed();
                   if (!mounted) return;
-                  setState(() {});
+                  setState(() {
+
+                  });
 
                 }, icon: Icon(_recordIcon, color: Colors.green, size: 28,
               ),
@@ -969,7 +1017,6 @@ child: Semantics(
       Fluttertoast.showToast(msg: "마이크 사용을 허용해주세요");
     }
   }
-
 
   void reset() {
 

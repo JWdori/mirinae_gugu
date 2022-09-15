@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class video_page extends StatefulWidget {
-  const video_page({
+class video_page_man extends StatefulWidget {
+  const video_page_man({
     Key ?key,
-required this.id,
+    required this.id,
   }) : super(key: key);
 
   final int id;
@@ -12,7 +12,7 @@ required this.id,
   @override
   _5_video_page createState() => _5_video_page();
 }
-class _5_video_page extends State<video_page>{
+class _5_video_page extends State<video_page_man>{
 
   late final YoutubePlayerController _controller;
   @override
@@ -33,33 +33,36 @@ class _5_video_page extends State<video_page>{
   }
 
   List asd = [
-    'MwyipytuVpk',
-    'Z--BToDN6-s',
-    'AoOStc8TF9k',
-    'TtHqSL3IHNw',
-    'EpwKZhzZLOw',
-    'glGLHr_t5WI',
-    'ofcowbROxoI',
-    'xWiMFcoA_vQ',
-    'UkEetWKxtwI',
-    'QeuVrjn_Dqg',
-    'Ec7sq0ubgBw',
-    'Dnb0z70SZGY',
-    'Mh_KCX9OXNk',
-    'PLg12zTGrWo',
-    'tbN5Q-_II6A',
-    'JB6Fvp9u2us',
-    'B_cHrG320P4',
-    'L7kVRSSTbBY',
-    'IyOp9VdLS2g',
-    'GFaZAaKTR9I',
-    'VDyjdL7BwYI',
-    'DUmIPBP8VRU',
-    '4y95m15iZjE',
-    'M0sxEbPoH-0',
-    'Blf-rn8LFVM',
-    'P7RdkTfhV9s',
-    'WAv1n1Dztsc'
+    'xgP5beHRxPE',
+    'AreLyfFgWMM',
+    'ASGO__lj29s',
+    'cbv2P13KWEU',
+    'Ley5msQEctQ',
+    'AKu8YFTAzZo',
+    'mYxmTyNHmFw',
+    '3oWtlJxPt0E',
+    "Af0Hf5m8_WI",
+    "HLog9MZsdO0",
+    "KoJ6bk9D2vw",
+    "zde2UbfK56c",
+    "f86vffxL2Ic",
+    "KXu0am95kqc",
+    "pdMZVQ1EGcQ",
+    "tWVxFKYdLvw",
+    "n3V-9-S9wJ8",
+    "FdIJ4zL0Foo",
+    "CIAN_Q3BXRU",
+    "gnc6e5tlhRA",
+    "xfiFtYE8CCE",
+    "UD8Z6VlAkOA",
+    "floSiepFIMk",
+    "UoTIXvnyzO4",
+    "dTqpUu9bKn8",
+    "TFLyzOKpwTw",
+    "O6ImOAXC1VY",
+    "nkNNmaI0EhA",
+    "u-gNoyk21VU",
+    "3tJqPfdYIVM"
 
   ];
 
@@ -82,10 +85,10 @@ class _5_video_page extends State<video_page>{
     var height2 = AppBar().preferredSize.height;
     return Container(
       child:
-        Column(
+      Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(right: MediaQuery.of(context).size.width/(27/(27-widget.id)),), //상단 슬라이드
+            padding: EdgeInsets.only(right: MediaQuery.of(context).size.width/(30/(30-widget.id)),), //상단 슬라이드
             child: Container(
               height: (MediaQuery.of(context).size.height - height2 - MediaQuery.of(context).padding.top) * 0.01,
               color: Colors.blue.withOpacity(0.6),
@@ -103,11 +106,11 @@ class _5_video_page extends State<video_page>{
           Container(
               height: (MediaQuery.of(context).size.height - height2 - MediaQuery.of(context).padding.top) * 0.31,
               child: Semantics(
-              label: "유튜브 영상",
-              child: youtube(context)
-          ))
+                  label: "유튜브 영상",
+                  child: youtube(context)
+              ))
         ],
       ),
-        );
+    );
   }
 }

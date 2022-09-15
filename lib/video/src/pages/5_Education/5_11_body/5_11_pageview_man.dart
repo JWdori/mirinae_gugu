@@ -4,7 +4,7 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 class video_page extends StatefulWidget {
   const video_page({
     Key ?key,
-required this.id,
+    required this.id,
   }) : super(key: key);
 
   final int id;
@@ -33,33 +33,36 @@ class _5_video_page extends State<video_page>{
   }
 
   List asd = [
-    'MwyipytuVpk',
-    'Z--BToDN6-s',
-    'AoOStc8TF9k',
-    'TtHqSL3IHNw',
-    'EpwKZhzZLOw',
-    'glGLHr_t5WI',
-    'ofcowbROxoI',
-    'xWiMFcoA_vQ',
-    'UkEetWKxtwI',
-    'QeuVrjn_Dqg',
-    'Ec7sq0ubgBw',
-    'Dnb0z70SZGY',
-    'Mh_KCX9OXNk',
-    'PLg12zTGrWo',
-    'tbN5Q-_II6A',
-    'JB6Fvp9u2us',
-    'B_cHrG320P4',
-    'L7kVRSSTbBY',
-    'IyOp9VdLS2g',
-    'GFaZAaKTR9I',
-    'VDyjdL7BwYI',
-    'DUmIPBP8VRU',
-    '4y95m15iZjE',
-    'M0sxEbPoH-0',
-    'Blf-rn8LFVM',
-    'P7RdkTfhV9s',
-    'WAv1n1Dztsc'
+    'h3HRGaUp_Xs',
+    'VJgp5eLcl48',
+    'V4329Afyaus',
+    'hQWioNu9lQ0',
+    'zsT7zA1TrBQ',
+    'f0nUtnKzry4',
+    'r3QaehtGKuI',
+    '0Fy4tuD4HPw',
+    'qh2ZnTDOVaU',
+    '2n0_HK_w6BM',
+    '1c3ESpPVSVg',
+    'Nz0wK-s0FBs',
+    'ewijTVngAKE',
+    '1o7mpcjvNzw',
+    'uzG0px-sOvE',
+    'n3SPWLQZVvA',
+    'q7S6NObo0jA',
+    'aF9-pol3FG0',
+    'KDZW6XtW2jE',
+    'F5F4eab6iuA',
+    'gYvSTfj55b4',
+    'DjxPdruVdeQ',
+    '2jXfSlN8_Cs',
+    'QaPtS1KQLgk',
+    'aGuTzjBXV84',
+    'pMm2twe40yU',
+    '5Ftohq4fhiQ',
+    'Ar-frbquATY',
+    'ceWdv-flxB4',
+    'BaiPvmbDt0k'
 
   ];
 
@@ -82,10 +85,10 @@ class _5_video_page extends State<video_page>{
     var height2 = AppBar().preferredSize.height;
     return Container(
       child:
-        Column(
+      Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(right: MediaQuery.of(context).size.width/(27/(27-widget.id)),), //상단 슬라이드
+            padding: EdgeInsets.only(right: MediaQuery.of(context).size.width/(30/(30-widget.id)),), //상단 슬라이드
             child: Container(
               height: (MediaQuery.of(context).size.height - height2 - MediaQuery.of(context).padding.top) * 0.01,
               color: Colors.blue.withOpacity(0.6),
@@ -103,11 +106,11 @@ class _5_video_page extends State<video_page>{
           Container(
               height: (MediaQuery.of(context).size.height - height2 - MediaQuery.of(context).padding.top) * 0.31,
               child: Semantics(
-              label: "유튜브 영상",
-              child: youtube(context)
-          ))
+                  label: "유튜브 영상",
+                  child: youtube(context)
+              ))
         ],
       ),
-        );
+    );
   }
 }
