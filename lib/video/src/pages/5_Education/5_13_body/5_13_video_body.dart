@@ -347,8 +347,8 @@ class _video_Body extends State<video_Body> {
       favorite = (prefs.getStringList("favorite_13_") ?? <bool>[])
           .map((value) => value == 'true')
           .toList();
-
-    });}
+    });
+    }
   }
 
   void plus() async {
