@@ -23,7 +23,6 @@ import 'package:mirinae_gugu/video/src/pages/6_record/6_audio_recorder.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-
 class video_Body extends StatefulWidget {
   video_Body({Key? key, required this.index}) : super(key: key);
 
@@ -147,7 +146,11 @@ class _video_Body extends State<video_Body> {
     "30. 학년"
   ];
 
-  // woman -> man
+  final List<String> gender_items = [
+    '여자1',
+    '남자1',
+  ];
+  String? selectedValue;
 
 
   //record
@@ -403,7 +406,8 @@ class _video_Body extends State<video_Body> {
   onChangeMethod(bool newValue){
     setState(() {
       val=newValue;
-      print(newValue);
+      print("현재 val = ");
+      print(val);
     });
   }
 
@@ -476,29 +480,7 @@ child: Semantics(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Semantics(
-                      label: "카메라 전원 버튼 \n카메라 현재 상태",
-                      child: FlutterSwitch(
-                        activeText: "카메라 on",
-                        inactiveText: "카메라 off",
-                        activeColor: Colors.blue,
-                        value: val,
-                        valueFontSize: 11.0.sp,
-                        inactiveTextColor: Colors.black87,
-                        inactiveToggleColor: Colors.white70,
-                        activeTextColor:Colors.white,
-                        inactiveTextFontWeight: FontWeight.w500,
-                        activeTextFontWeight: FontWeight.w500,
-                        width: 85.w,
-                        borderRadius: 30.0,
-                        showOnOff: true,
-                        onToggle: (val) {
-                          setState(() {
-                            val = onChangeMethod(val);
-                          });
-                        },
-                      ),
-                    ),
+
                     Semantics(
                       label: "남자 전원 버튼",
                       child: FlutterSwitch(
@@ -506,14 +488,14 @@ child: Semantics(
                         inactiveText: "남자 on",
                         activeColor: Colors.blue,
                         value: switch_man,
-                        valueFontSize: 11.0.sp,
+                        valueFontSize: 13.0.sp,
                         inactiveTextColor: Colors.black87,
                         inactiveToggleColor: Colors.white70,
                         activeTextColor:Colors.white,
                         inactiveTextFontWeight: FontWeight.w500,
                         activeTextFontWeight: FontWeight.w500,
-                        width: 85.w,
-                        borderRadius: 30.0,
+                        width: 83.w,
+                        borderRadius: 28.0,
                         showOnOff: true,
                         onToggle: (switch_man) {
                           setState(() {
@@ -521,8 +503,8 @@ child: Semantics(
                           });
                         },
                       ),
-                    )
 
+                    )
                   ],
 
                 )
@@ -742,24 +724,54 @@ child: Semantics(
               )
 
             ]),),
+
     Semantics(
-    label: "",
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children:[
-            IconButton(
-              padding: EdgeInsets.only(bottom: 3,),
+    label: "카메라 전원 버튼 \n카메라 현재 상태",
+      child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children:[
+        IconButton(
+            padding: EdgeInsets.only(bottom: 3,),
+                onPressed: () {
+                  setState(() {
+                    val == false ? onChangeMethod(true) : onChangeMethod(false);
+                  });
+                },
+                icon: val == false? Icon(Icons.photo_camera_rounded, color: Colors.red, size: 28)
+                    : Icon(Icons.cancel_presentation_rounded, color: Colors.red, size: 28),
+              ),
+    Padding(
+      padding: EdgeInsets.only(bottom: 2),
+      child:
+      val == false
+      ? Text("카메라 켜기", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,)
+          : Text("카메라 끄기", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
+      )
+          ]
+            )),
+
+    Semantics(
+      label: "받아쓰기",
+      child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children:[
+      IconButton(
+              padding: EdgeInsets.only(bottom: 3),
               onPressed: recognizing ? stopRecording : streamingRecognize,
-              icon: recognizing ? Icon(Icons.mic, color: Colors.red, size: 28)
-                                : Icon(Icons.mic, color: Colors.blue, size: 28)),
+              icon: recognizing ? Icon(Icons.voice_over_off_rounded , color: Colors.blue, size: 28)
+                                : Icon(Icons.record_voice_over_rounded, color: Colors.blue, size: 28)),
 
             Padding(
               padding: EdgeInsets.only(bottom: 3),
-              child: Text("받아쓰기", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
+              child: recognizing
+              ? Text("받아쓰기 중지", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,)
+              : Text("받아쓰기 시작", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
             )
-          ],
+            ]
         ),),
+
         stop == false
             ? Semantics(
             label: "",
@@ -780,8 +792,8 @@ child: Semantics(
               ),
               ),
               Padding(
-                padding: EdgeInsets.only(bottom: 3,),
-                child: Text("녹음하기", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
+                padding: EdgeInsets.only(bottom: 3),
+                child: Text("녹음 시작", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
               )
             ]
         ))
@@ -800,7 +812,7 @@ child: Semantics(
               ),
               Padding(
                 padding: EdgeInsets.only(bottom: 3,),
-                child: Text("녹음중", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
+                child: Text("녹음 중지", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
               )
             ]),
 
