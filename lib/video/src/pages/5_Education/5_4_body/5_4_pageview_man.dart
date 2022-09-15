@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class video_page extends StatefulWidget {
-  const video_page({
+class video_page_man extends StatefulWidget {
+  const video_page_man ({
     Key ?key,
     required this.id,
   }) : super(key: key);
@@ -11,7 +11,7 @@ class video_page extends StatefulWidget {
 
   _5_video_page createState() => _5_video_page();
 }
-class _5_video_page extends State<video_page>{
+class _5_video_page extends State<video_page_man>{
 
   late final YoutubePlayerController _controller;
   @override
