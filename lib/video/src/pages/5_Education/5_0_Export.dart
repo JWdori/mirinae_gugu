@@ -13,5 +13,4 @@ export 'package:mirinae_gugu/video/src/pages/5_Education/5_12_body/5_12_Vocab_Sc
 export 'package:mirinae_gugu/video/src/pages/5_Education/5_13_body/5_13_Vocab_Screen.dart';
 export 'package:mirinae_gugu/video/src/pages/5_Education/5_14_body/5_14_Vocab_Screen.dart';
 export 'package:mirinae_gugu/video/src/pages/5_Education/5_15_body/5_15_Vocab_Screen.dart';
-export 'package:mirinae_gugu/video/src/pages/5_Education/5_16_body/5_16_Vocab_Screen.dart';
 

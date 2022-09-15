@@ -34,7 +34,8 @@ class Word_Main extends StatelessWidget{
             ButtonChapter(onTap: Vocab_Screen_511(), number: 11, text: '겨울'),
             ButtonChapter(onTap: Vocab_Screen_512(), number: 12, text: '가족'),
             ButtonChapter(onTap: Vocab_Screen_513(), number: 13, text: '외래어'),
-            ButtonChapter(onTap: Vocab_Screen_514(), number: 14, text: '문장(1)')
+            ButtonChapter(onTap: Vocab_Screen_514(), number: 14, text: '문장(1)'),
+            ButtonChapter(onTap: Vocab_Screen_515(), number: 15, text: '문장(2)')
 
           ],
         ),
