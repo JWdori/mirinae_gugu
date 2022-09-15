@@ -23,6 +23,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import '5_10_pageview.dart';
+import '5_10_pageview_man.dart';
 
 
 class video_Body extends StatefulWidget {
@@ -146,6 +147,13 @@ class _video_Body extends State<video_Body> {
 
   ];
 
+  final List<String> gender_items = [
+    '여자1',
+    '남자1',
+  ];
+  String? selectedValue;
+
+
   //record
   late Directory? appDir;
 
@@ -265,22 +273,22 @@ class _video_Body extends State<video_Body> {
           }
         } else {
           if (mounted) {
-          setState(() {
-            text = currentText;
-            recognizeFinished = true;
-          });}
+            setState(() {
+              text = currentText;
+              recognizeFinished = true;
+            });}
         }
 
       },
 
           onDone: () {
             if (mounted) {
-        setState(() {
+              setState(() {
 
-          recognizing = false;
+                recognizing = false;
 
-        });
-      }});
+              });
+            }});
     }
   }
 
@@ -309,7 +317,7 @@ class _video_Body extends State<video_Body> {
   Future<void> loadFavorite() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      favorite = (prefs.getStringList("favorite_10_") ?? <bool>[])
+      favorite = (prefs.getStringList("favorite_1_") ?? <bool>[])
           .map((value) => value == 'true')
           .toList();
     });
@@ -335,14 +343,14 @@ class _video_Body extends State<video_Body> {
       });
     }
     await prefs.setStringList(
-        "favorite_10_", favorite.map((value) => value.toString()).toList());
+        "favorite_1_", favorite.map((value) => value.toString()).toList());
     if (mounted) {
-    setState(() {
-      favorite = (prefs.getStringList("favorite_10_") ?? <bool>[])
-          .map((value) => value == 'true')
-          .toList();
+      setState(() {
+        favorite = (prefs.getStringList("favorite_1_") ?? <bool>[])
+            .map((value) => value == 'true')
+            .toList();
 
-    });}
+      });}
   }
 
   void plus() async {
@@ -392,9 +400,21 @@ class _video_Body extends State<video_Body> {
   }
   var height2 = AppBar().preferredSize.height;
   bool val = false;
+
+  // woman -> man
+  bool switch_man = false;
+
   onChangeMethod(bool newValue){
     setState(() {
       val=newValue;
+      print("현재 val = ");
+      print(val);
+    });
+  }
+
+  onChangeMethod_man(bool newValue){
+    setState(() {
+      switch_man = newValue;
       print(newValue);
     });
   }
@@ -402,7 +422,7 @@ class _video_Body extends State<video_Body> {
   Yourface(){
     if (val == true) {
       return Semantics(
-    label: "전면 카메라 켜짐",
+          label: "전면 카메라 켜짐",
           child: CameraPreview(controller));
     } else if (val == false) {
       return Container(
@@ -411,14 +431,15 @@ class _video_Body extends State<video_Body> {
               MediaQuery.of(context).padding.top) *
               0.441,
           color: Colors.grey[300],
-child: Semantics(
-  label: "",
-          child: Center(
-            child: Text("\n카메라\n  꺼짐",style: TextStyle(fontSize: 60.sp,fontFamily:'cookie')),
-            ))
+          child: Semantics(
+              label: "",
+              child: Center(
+                child: Text("\n카메라\n  꺼짐",style: TextStyle(fontSize: 60.sp,fontFamily:'cookie')),
+              ))
       );
     }
   }
+
   @override
   Widget build(BuildContext context) {
     saved();
@@ -435,24 +456,24 @@ child: Semantics(
           backgroundColor: Colors.white,
 
           title: Center(
-        child: Padding(
-        padding:EdgeInsets.only(left:20),
-            child: Text(
-              '${Questiontitle[widget.index - 1]}',
-              style: TextStyle(fontSize: 24.sp + size, color: Colors.blue),
-            ),)
+              child: Padding(
+                padding:EdgeInsets.only(left:20),
+                child: Text(
+                  '${Questiontitle[widget.index - 1]}',
+                  style: TextStyle(fontSize: 24.sp + size, color: Colors.blue),
+                ),)
           ),
 
           leading: Semantics(
             label: "이전 페이지로 이동",
-    child: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            color: Colors.black,
-            iconSize: 25,
-            icon: Icon(Icons.arrow_back),
-          ),
+            child: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              color: Colors.black,
+              iconSize: 25,
+              icon: Icon(Icons.arrow_back),
+            ),
           ),
           actions: <Widget>[
             Padding(
@@ -460,28 +481,30 @@ child: Semantics(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
+
                     Semantics(
-                      label: "카메라 전원 버튼 \n카메라 현재 상태",
+                      label: "남자 전원 버튼",
                       child: FlutterSwitch(
-                        activeText: "카메라 on",
-                        inactiveText: "카메라 off",
+                        activeText: "여자 on",
+                        inactiveText: "남자 on",
                         activeColor: Colors.blue,
-                        value: val,
-                        valueFontSize: 11.0.sp,
+                        value: switch_man,
+                        valueFontSize: 13.0.sp,
                         inactiveTextColor: Colors.black87,
                         inactiveToggleColor: Colors.white70,
                         activeTextColor:Colors.white,
                         inactiveTextFontWeight: FontWeight.w500,
                         activeTextFontWeight: FontWeight.w500,
-                        width: 85.w,
-                        borderRadius: 30.0,
+                        width: 83.w,
+                        borderRadius: 28.0,
                         showOnOff: true,
-                        onToggle: (val) {
+                        onToggle: (switch_man) {
                           setState(() {
-                            val = onChangeMethod(val);
+                            switch_man = onChangeMethod_man(switch_man);
                           });
                         },
                       ),
+
                     )
                   ],
 
@@ -493,10 +516,10 @@ child: Semantics(
           children: [
             //카메라
             Center(
-                child: Container(
-                    padding: EdgeInsets.all(20),
-                    child:
-                    Yourface()),
+              child: Container(
+                  padding: EdgeInsets.all(20),
+                  child:
+                  Yourface()),
             ),
 
             //상단 슬라이드
@@ -521,9 +544,15 @@ child: Semantics(
                               physics: NeverScrollableScrollPhysics(),
                               controller: _pageController,
                               onPageChanged: updateTheQnNum,
-                              itemCount: 29,
-                              itemBuilder: (context, index) => video_page(
-                                id: widget.index,
+                              itemCount: 30,
+                              itemBuilder: (context, index) => (
+                                  switch_man == true
+                                      ? video_page_man(
+                                    id: widget.index,
+                                  )
+                                      : video_page(
+                                    id: widget.index,
+                                  )
                               ),
                             ),
                             //child: youtube(context),
@@ -531,18 +560,18 @@ child: Semantics(
                         ),
                       ],
                     ),
-    ],
+                  ],
                 ),
                 Semantics(
-                    label: "",
-                    child: SizedBox(
+                  label: "",
+                  child: SizedBox(
 
-                  height: (MediaQuery.of(context).size.height -
-                      height2 -
-                      MediaQuery.of(context).padding.top) *
-                      0.341,
-                  child: backcolor3(),
-                ),),
+                    height: (MediaQuery.of(context).size.height -
+                        height2 -
+                        MediaQuery.of(context).padding.top) *
+                        0.341,
+                    child: backcolor3(),
+                  ),),
 
                 Stack(
                   children: [
@@ -562,35 +591,35 @@ child: Semantics(
                                 children: <Widget>[
                                   Semantics(
                                     label: "받아쓰기 노트",
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        color: Colors.grey[200],
-                                        border: Border.all(color: Colors.grey),
-                                        //width:5,
-                                        borderRadius:
-                                        BorderRadius.all(Radius.circular(20))),
-                                  ),),
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey[200],
+                                          border: Border.all(color: Colors.grey),
+                                          //width:5,
+                                          borderRadius:
+                                          BorderRadius.all(Radius.circular(20))),
+                                    ),),
                                   Padding(
-                                    padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width*0.83, 0, 0, 10),
-                                    child:Semantics(
-                                      label: "",
+                                      padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width*0.83, 0, 0, 10),
+                                      child:Semantics(
+                                        label: "",
 
-                                    child:
-                                    Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      children:[
+                                        child:
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                          children:[
 
-                                        IconButton(
-                                          padding: EdgeInsets.zero,
-                                          icon:ImageIcon(AssetImage('assets/retry.png'),color:Colors.black,size:15),
-                                          onPressed: () {
-                                            reset();
-                                          },
-                                        ),
-                                        Text("다시", style: TextStyle(height: 0.2.h,fontSize: 10.sp,color: Colors.black), textAlign: TextAlign.center),
-                                      ],
-                                    ),)
+                                            IconButton(
+                                              padding: EdgeInsets.zero,
+                                              icon:ImageIcon(AssetImage('assets/retry.png'),color:Colors.black,size:15),
+                                              onPressed: () {
+                                                reset();
+                                              },
+                                            ),
+                                            Text("다시", style: TextStyle(height: 0.2.h,fontSize: 10.sp,color: Colors.black), textAlign: TextAlign.center),
+                                          ],
+                                        ),)
                                   ),
                                   Container(
                                     margin: const EdgeInsets.only(left: 30, right: 30,),
@@ -611,9 +640,9 @@ child: Semantics(
                             color: Colors.grey[200],
                             child: Semantics(
                                 label: "성량 확인 바",
-                            child: Container(
-                              alignment: Alignment.center,
-                              child: Noise(),)
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  child: Noise(),)
                             ),
                           ),
                         ),
@@ -671,118 +700,148 @@ child: Semantics(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-      Semantics(
-      label: "",
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children:[
-              IconButton(
-                  icon: finish
-                      ? Icon(Icons.arrow_back_ios_sharp,
+        Semantics(
+          label: "",
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children:[
+                IconButton(
+                    icon: finish
+                        ? Icon(Icons.arrow_back_ios_sharp,
                       color: Colors.white.withOpacity(0), size: 30,semanticLabel: "첫번째 페이지 입니다",)
-                      : Icon(Icons.arrow_back_ios_sharp,
-                      color: Colors.black, size: 30),
-                  onPressed: () async {
-                    back();
-                    //onPageChanged: _questionController.updateTheQnNum,
-                  }),
-              Container(
-                  padding: EdgeInsets.only(bottom: 5,),
-                  child: finish
-                      ? Text("", style: TextStyle(height: 0.05.h,fontSize: 10.sp,color: Colors.white.withOpacity(0)),textAlign: TextAlign.center,)
-                      : Text("이전", style: TextStyle(height: 0.05.h,fontSize: 10.sp,color: Colors.black),textAlign: TextAlign.center,)
+                        : Icon(Icons.arrow_back_ios_sharp,
+                        color: Colors.black, size: 30),
+                    onPressed: () async {
+                      back();
+                      //onPageChanged: _questionController.updateTheQnNum,
+                    }),
+                Container(
+                    padding: EdgeInsets.only(bottom: 5,),
+                    child: finish
+                        ? Text("", style: TextStyle(height: 0.05.h,fontSize: 10.sp,color: Colors.white.withOpacity(0)),textAlign: TextAlign.center,)
+                        : Text("이전", style: TextStyle(height: 0.05.h,fontSize: 10.sp,color: Colors.black),textAlign: TextAlign.center,)
 
-              )
+                )
 
-            ]),),
-    Semantics(
-    label: "",
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children:[
-            IconButton(
-              padding: EdgeInsets.only(bottom: 3,),
-              onPressed: recognizing ? stopRecording : streamingRecognize,
-              icon: recognizing
-                  ? Icon(Icons.mic, color: Colors.red, size: 28)
-                  : Icon(Icons.mic, color: Colors.blue, size: 28),
-            ),
-            Padding(
-              padding: EdgeInsets.only(bottom: 3),
-              child: Text("받아쓰기", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
-            )
-          ],
-        ),),
+              ]),),
+
+        Semantics(
+            label: "카메라 전원 버튼 \n카메라 현재 상태",
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children:[
+                  IconButton(
+                    padding: EdgeInsets.only(bottom: 3,),
+                    onPressed: () {
+                      setState(() {
+                        val == false ? onChangeMethod(true) : onChangeMethod(false);
+                      });
+                    },
+                    icon: val == false? Icon(Icons.photo_camera_rounded, color: Colors.red, size: 28)
+                        : Icon(Icons.cancel_presentation_rounded, color: Colors.red, size: 28),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 2),
+                    child:
+                    val == false
+                        ? Text("카메라 켜기", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,)
+                        : Text("카메라 끄기", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
+                  )
+                ]
+            )),
+
+        Semantics(
+          label: "받아쓰기",
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children:[
+                IconButton(
+                    padding: EdgeInsets.only(bottom: 3),
+                    onPressed: recognizing ? stopRecording : streamingRecognize,
+                    icon: recognizing ? Icon(Icons.voice_over_off_rounded , color: Colors.blue, size: 28)
+                        : Icon(Icons.record_voice_over_rounded, color: Colors.blue, size: 28)),
+
+                Padding(
+                  padding: EdgeInsets.only(bottom: 3),
+                  child: recognizing
+                      ? Text("받아쓰기 중지", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,)
+                      : Text("받아쓰기 시작", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
+                )
+              ]
+          ),),
+
         stop == false
             ? Semantics(
             label: "",
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children:[
-              IconButton(
-                padding: EdgeInsets.only(bottom: 3,),
-                onPressed: () async {
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children:[
+                  IconButton(
+                    padding: EdgeInsets.only(bottom: 3,),
+                    onPressed: () async {
+                      await _onRecordButtonPressed();
+                      if (!mounted) return;
+                      setState(() {
 
-                  await _onRecordButtonPressed();
-                  if (!mounted) return;
-                  setState(() {});
+                      });
 
-                }, icon: Icon(_recordIcon, color: Colors.green, size: 28,
-              ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(bottom: 3,),
-                child: Text("녹음하기", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
-              )
-            ]
-        ))
-            :
-    Semantics(
-    label: "",
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children:[
-              IconButton(
-                padding: EdgeInsets.zero,
-                onPressed:
-                _currentStatus != RecordingStatus.Unset ? _stop : null,
-                icon: Icon(Icons.stop, color: Colors.green, size: 28),
-              ),
-              Padding(
-                padding: EdgeInsets.only(bottom: 3,),
-                child: Text("녹음중", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
-              )
-            ]),
-
-    ),    Semantics(
-            label: "",
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children:[
-              IconButton(
-                  icon: start
-                      ? Icon(Icons.arrow_forward_ios_sharp,
-                      color: Colors.white.withOpacity(0), size: 30,semanticLabel: "마지막 페이지 입니다")
-                      : Icon(Icons.arrow_forward_ios_sharp,
-                      color: Colors.black, size: 30),
-                  onPressed: () async {
-                    plus();
-                    //onPageChanged: _questionController.updateTheQnNum,
-                  }),
-              Padding(
-                  padding: EdgeInsets.only(bottom: 5,),
-                  child: Container(padding:EdgeInsets.zero,
-                      child: start
-                          ? Text("", style: TextStyle(height: 0.05.h,fontSize: 10.sp,color: Colors.white.withOpacity(0)),textAlign: TextAlign.center,)
-                          : Text("다음", style: TextStyle(height: 0.05.h,fontSize: 10.sp,color: Colors.black),textAlign: TextAlign.center,)
+                    }, icon: Icon(_recordIcon, color: Colors.green, size: 28,
+                  ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 3),
+                    child: Text("녹음 시작", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
                   )
-              )
-            ])
+                ]
+            ))
+            :
+        Semantics(
+          label: "",
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children:[
+                IconButton(
+                  padding: EdgeInsets.zero,
+                  onPressed:
+                  _currentStatus != RecordingStatus.Unset ? _stop : null,
+                  icon: Icon(Icons.stop, color: Colors.green, size: 28),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 3,),
+                  child: Text("녹음 중지", style: TextStyle(height: 0.05.h,fontSize: 12.sp,color: Colors.black),textAlign: TextAlign.center,),
+                )
+              ]),
+
+        ),    Semantics(
+            label: "",
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children:[
+                  IconButton(
+                      icon: start
+                          ? Icon(Icons.arrow_forward_ios_sharp,
+                          color: Colors.white.withOpacity(0), size: 30,semanticLabel: "마지막 페이지 입니다")
+                          : Icon(Icons.arrow_forward_ios_sharp,
+                          color: Colors.black, size: 30),
+                      onPressed: () async {
+                        plus();
+                        //onPageChanged: _questionController.updateTheQnNum,
+                      }),
+                  Padding(
+                      padding: EdgeInsets.only(bottom: 5,),
+                      child: Container(padding:EdgeInsets.zero,
+                          child: start
+                              ? Text("", style: TextStyle(height: 0.05.h,fontSize: 10.sp,color: Colors.white.withOpacity(0)),textAlign: TextAlign.center,)
+                              : Text("다음", style: TextStyle(height: 0.05.h,fontSize: 10.sp,color: Colors.black),textAlign: TextAlign.center,)
+                      )
+                  )
+                ])
         )],
     );
   }
@@ -817,7 +876,7 @@ child: Semantics(
       color: Colors.white.withOpacity(0),
     );
   }
-  
+
 
 //텍스트 프린트
   Widget textprint() {
@@ -971,7 +1030,6 @@ child: Semantics(
       Fluttertoast.showToast(msg: "마이크 사용을 허용해주세요");
     }
   }
-
 
   void reset() {
 
