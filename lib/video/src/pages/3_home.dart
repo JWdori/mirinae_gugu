@@ -247,6 +247,13 @@ class _Home extends State<Home> {
             favorite_1.map((value) => value.toString()).toList());
         prefs.setStringList("favorite_13_",
             favorite_1.map((value) => value.toString()).toList());
+        prefs.setStringList("favorite_14_",
+            favorite_1.map((value) => value.toString()).toList());
+        prefs.setStringList("favorite_15_",
+            favorite_1.map((value) => value.toString()).toList());
+        prefs.setStringList("favorite_16_",
+            favorite_1.map((value) => value.toString()).toList());
+
       }
       setState(() {});
     });
