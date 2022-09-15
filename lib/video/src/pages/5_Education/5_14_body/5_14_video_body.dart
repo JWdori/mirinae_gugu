@@ -8,7 +8,7 @@ import 'package:flutter_switch/flutter_switch.dart';
 import 'package:google_speech/google_speech.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
-import 'package:mirinae_gugu/video/src/pages/5_Education/5_13_body/5_13_pageview.dart';
+import 'package:mirinae_gugu/video/src/pages/5_Education/5_14_body/5_14_pageview.dart';
 
 import 'package:mirinae_gugu/video/src/pages/noise_meter.dart';
 import 'package:rxdart/rxdart.dart';
@@ -118,36 +118,36 @@ class _video_Body extends State<video_Body> {
   BehaviorSubject<List<int>>? _audioStream;
   late bool favoriteButton_0_01_01 = false;
   List<String> Questiontitle = [
-  '1. 피자',
-  '2. 프라이팬',
-  '3. 파인애플',
-  '4. 텔레비전',
-  '5. 케이크',
-  '6. 컵',
-  '7. 컴퓨터',
-  '8. 카페',
-  '9. 카메라',
-  '10. 치킨',
-  '11. 초콜릿',
-  '12. 주스',
-  '13. 인터넷',
-  '14. 이어폰',
-  '15. 엘리베이터',
-  '16. 에어컨',
-  '17. 스프링',
-  '18. 소스',
-  '19. 서핑',
-  '20. 버스',
-  '21. 배터리',
-  '22. 메세지',
-  '23. 마우스',
-  '24. 마스크',
-  '25. 립스틱',
-  '26. 로션',
-  '27. 로그인',
-  '28. 다이어트',
-  '29. 노트북',
-  '30. 게임'
+    '1. 가격이 얼마에요?',
+    '2. 강아지가 귀여워요',
+    '3. 공부하고 있어요',
+    '4. 궁금한 점이 하나 있어요',
+    '5. 기다리고 있을게',
+    '6. 날씨가 좋네요',
+    '7. 내 취미는 운동이야',
+    '8. 노래가 정말 좋네요',
+    '9. 다음에 봬요',
+    '10. 다행히 큰 문제 없어',
+    '11. 도와줘서 고마워',
+    '12. 뒤에 일정이 있습니다',
+    '13. 뜨거우니 조심하세요',
+    '14. 도서관 가는 중이야',
+    '15. 머리가 아파',
+    '16. 무슨 일이야?',
+    '17. 문제가 어렵네',
+    '18. 물 마실래?',
+    '19. 뭐하고 있어?',
+    '20. 만나서 반갑습니다',
+    '21. 바빠서 안될 것 같아',
+    '22. 방금 밥 먹었어요',
+    '23. 밥이 정말 맛있어요',
+    '24. 방금 일어났어',
+    '25. 부모님이랑 같이 있어',
+    '26. 부재중입니다',
+    '27. 빌릴 수 있을가요',
+    '28. 산책 중이야',
+    '29. 생일 축하해',
+    '30. 새해 복 많이 받으세요'
 
 
   ];
