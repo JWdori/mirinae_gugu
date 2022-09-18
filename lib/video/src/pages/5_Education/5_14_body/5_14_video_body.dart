@@ -396,6 +396,7 @@ class _video_Body extends State<video_Body> {
       }
     }
   }
+
   var height2 = AppBar().preferredSize.height;
   bool val = false;
 
