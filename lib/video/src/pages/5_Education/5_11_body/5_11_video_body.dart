@@ -320,7 +320,7 @@ class _video_Body extends State<video_Body> {
   Future<void> loadFavorite() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      favorite = (prefs.getStringList("favorite_1_") ?? <bool>[])
+      favorite = (prefs.getStringList("favorite_11_") ?? <bool>[])
           .map((value) => value == 'true')
           .toList();
     });
@@ -346,10 +346,10 @@ class _video_Body extends State<video_Body> {
       });
     }
     await prefs.setStringList(
-        "favorite_1_", favorite.map((value) => value.toString()).toList());
+        "favorite_11_", favorite.map((value) => value.toString()).toList());
     if (mounted) {
       setState(() {
-        favorite = (prefs.getStringList("favorite_1_") ?? <bool>[])
+        favorite = (prefs.getStringList("favorite_11_") ?? <bool>[])
             .map((value) => value == 'true')
             .toList();
 

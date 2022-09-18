@@ -152,13 +152,6 @@ class _video_Body extends State<video_Body> {
 
   ];
 
-  final List<String> gender_items = [
-    '여자1',
-    '남자1',
-  ];
-  String? selectedValue;
-
-
   //record
   late Directory? appDir;
 
@@ -322,7 +315,7 @@ class _video_Body extends State<video_Body> {
   Future<void> loadFavorite() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      favorite = (prefs.getStringList("favorite_1_") ?? <bool>[])
+      favorite = (prefs.getStringList("favorite_14_") ?? <bool>[])
           .map((value) => value == 'true')
           .toList();
     });
@@ -348,10 +341,10 @@ class _video_Body extends State<video_Body> {
       });
     }
     await prefs.setStringList(
-        "favorite_1_", favorite.map((value) => value.toString()).toList());
+        "favorite_14_", favorite.map((value) => value.toString()).toList());
     if (mounted) {
       setState(() {
-        favorite = (prefs.getStringList("favorite_1_") ?? <bool>[])
+        favorite = (prefs.getStringList("favorite_14_") ?? <bool>[])
             .map((value) => value == 'true')
             .toList();
 
@@ -555,7 +548,7 @@ class _video_Body extends State<video_Body> {
                                   //     ? video_page_man(
                                   //   id: widget.index,
                                   // )
-                                  //     :
+                                  //   :
                                   video_page(
                                     id: widget.index,
                                   )

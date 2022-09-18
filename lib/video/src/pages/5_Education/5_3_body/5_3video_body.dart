@@ -314,7 +314,7 @@ class _video_Body extends State<video_Body_3> {
   Future<void> loadFavorite() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      favorite = (prefs.getStringList("favorite_1_") ?? <bool>[])
+      favorite = (prefs.getStringList("favorite_3") ?? <bool>[])
           .map((value) => value == 'true')
           .toList();
     });
@@ -340,10 +340,10 @@ class _video_Body extends State<video_Body_3> {
       });
     }
     await prefs.setStringList(
-        "favorite_1_", favorite.map((value) => value.toString()).toList());
+        "favorite_3", favorite.map((value) => value.toString()).toList());
     if (mounted) {
       setState(() {
-        favorite = (prefs.getStringList("favorite_1_") ?? <bool>[])
+        favorite = (prefs.getStringList("favorite_3") ?? <bool>[])
             .map((value) => value == 'true')
             .toList();
 
@@ -351,8 +351,8 @@ class _video_Body extends State<video_Body_3> {
   }
 
   void plus() async {
-    if (widget.index != 31) {
-      if (widget.index == 30) {
+    if (widget.index != 30) {
+      if (widget.index == 29) {
         setState(() {
           start = true;
         });
@@ -367,12 +367,12 @@ class _video_Body extends State<video_Body_3> {
   }
 
   void backplusload() async {
-    if (widget.index != 31) {
+    if (widget.index != 30) {
       if (widget.index == 1) {
         setState(() {
           finish = true;
         });
-      } else if (widget.index == 30) {
+      } else if (widget.index == 29) {
         setState(() {
           start = true;
         });
@@ -381,7 +381,7 @@ class _video_Body extends State<video_Body_3> {
   }
 
   void back() async {
-    if (widget.index != 31) {
+    if (widget.index != 30) {
       if (widget.index == 1) {
         setState(() {
           finish = true;
@@ -541,7 +541,7 @@ class _video_Body extends State<video_Body_3> {
                               physics: NeverScrollableScrollPhysics(),
                               controller: _pageController,
                               onPageChanged: updateTheQnNum,
-                              itemCount: 30,
+                              itemCount: 29,
                               itemBuilder: (context, index) => (
                                   switch_man == true
                                       ? video_page_man(
