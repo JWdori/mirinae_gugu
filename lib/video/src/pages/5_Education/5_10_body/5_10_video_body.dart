@@ -317,7 +317,7 @@ class _video_Body extends State<video_Body> {
   Future<void> loadFavorite() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      favorite = (prefs.getStringList("favorite_1_") ?? <bool>[])
+      favorite = (prefs.getStringList("favorite_10_") ?? <bool>[])
           .map((value) => value == 'true')
           .toList();
     });
@@ -343,10 +343,10 @@ class _video_Body extends State<video_Body> {
       });
     }
     await prefs.setStringList(
-        "favorite_1_", favorite.map((value) => value.toString()).toList());
+        "favorite_10_", favorite.map((value) => value.toString()).toList());
     if (mounted) {
       setState(() {
-        favorite = (prefs.getStringList("favorite_1_") ?? <bool>[])
+        favorite = (prefs.getStringList("favorite_10_") ?? <bool>[])
             .map((value) => value == 'true')
             .toList();
 
@@ -485,8 +485,8 @@ class _video_Body extends State<video_Body> {
                     Semantics(
                       label: "남자 전원 버튼",
                       child: FlutterSwitch(
-                        activeText: "여자 on",
-                        inactiveText: "남자 on",
+                        activeText: "남자",
+                        inactiveText: "여자",
                         activeColor: Colors.blue,
                         value: switch_man,
                         valueFontSize: 13.0.sp,
@@ -544,7 +544,7 @@ class _video_Body extends State<video_Body> {
                               physics: NeverScrollableScrollPhysics(),
                               controller: _pageController,
                               onPageChanged: updateTheQnNum,
-                              itemCount: 30,
+                              itemCount: 29,
                               itemBuilder: (context, index) => (
                                   switch_man == true
                                       ? video_page_man(
