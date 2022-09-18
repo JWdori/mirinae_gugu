@@ -39,6 +39,7 @@ class video_Body extends StatefulWidget {
 class _video_Body extends State<video_Body> {
   late PageController _pageController;
   List<String> FavoriteButton = [
+
     "false",
     "false",
     "false",
@@ -104,6 +105,7 @@ class _video_Body extends State<video_Body> {
     false,
     false,
     false
+
   ];
   CameraController controller =
   CameraController(cameras[1], ResolutionPreset.veryHigh);
@@ -271,22 +273,26 @@ class _video_Body extends State<video_Body> {
           }
         } else {
           if (mounted) {
+
             setState(() {
               text = currentText;
               recognizeFinished = true;
             });}
+
         }
 
       },
 
           onDone: () {
             if (mounted) {
+
               setState(() {
 
                 recognizing = false;
 
               });
             }});
+
     }
   }
 
@@ -343,12 +349,14 @@ class _video_Body extends State<video_Body> {
     await prefs.setStringList(
         "favorite_14_", favorite.map((value) => value.toString()).toList());
     if (mounted) {
+
       setState(() {
         favorite = (prefs.getStringList("favorite_14_") ?? <bool>[])
             .map((value) => value == 'true')
             .toList();
 
       });}
+
   }
 
   void plus() async {
@@ -397,6 +405,7 @@ class _video_Body extends State<video_Body> {
     }
   }
 
+
   var height2 = AppBar().preferredSize.height;
   bool val = false;
 
@@ -414,6 +423,7 @@ class _video_Body extends State<video_Body> {
   onChangeMethod_man(bool newValue){
     setState(() {
       switch_man = newValue;
+
       print(newValue);
     });
   }
@@ -421,7 +431,9 @@ class _video_Body extends State<video_Body> {
   Yourface(){
     if (val == true) {
       return Semantics(
+
           label: "전면 카메라 켜짐",
+
           child: CameraPreview(controller));
     } else if (val == false) {
       return Container(
@@ -430,6 +442,7 @@ class _video_Body extends State<video_Body> {
               MediaQuery.of(context).padding.top) *
               0.441,
           color: Colors.grey[300],
+
           child: Semantics(
               label: "",
               child: Center(
@@ -438,6 +451,7 @@ class _video_Body extends State<video_Body> {
       );
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -455,16 +469,19 @@ class _video_Body extends State<video_Body> {
           backgroundColor: Colors.white,
 
           title: Center(
+
               child: Padding(
                 padding:EdgeInsets.only(left:20),
                 child: Text(
                   '${Questiontitle[widget.index - 1]}',
                   style: TextStyle(fontSize: 24.sp + size, color: Colors.blue),
                 ),)
+
           ),
 
           leading: Semantics(
             label: "이전 페이지로 이동",
+
             child: IconButton(
               onPressed: () {
                 Navigator.pop(context);
@@ -473,6 +490,7 @@ class _video_Body extends State<video_Body> {
               iconSize: 25,
               icon: Icon(Icons.arrow_back),
             ),
+
           ),
           actions: <Widget>[
             Padding(
@@ -480,6 +498,7 @@ class _video_Body extends State<video_Body> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
+
 
                     Semantics(
                       label: "남자 전원 버튼",
@@ -489,11 +508,13 @@ class _video_Body extends State<video_Body> {
                         activeColor: Colors.blue,
                         value: switch_man,
                         valueFontSize: 13.0.sp,
+
                         inactiveTextColor: Colors.black87,
                         inactiveToggleColor: Colors.white70,
                         activeTextColor:Colors.white,
                         inactiveTextFontWeight: FontWeight.w500,
                         activeTextFontWeight: FontWeight.w500,
+
                         width: 83.w,
                         borderRadius: 28.0,
                         showOnOff: true,
@@ -503,6 +524,7 @@ class _video_Body extends State<video_Body> {
                           });
                         },
                       ),
+
 
                     )
                   ],
@@ -515,10 +537,12 @@ class _video_Body extends State<video_Body> {
           children: [
             //카메라
             Center(
+
               child: Container(
                   padding: EdgeInsets.all(20),
                   child:
                   Yourface()),
+
             ),
 
             //상단 슬라이드
@@ -544,6 +568,7 @@ class _video_Body extends State<video_Body> {
                               controller: _pageController,
                               onPageChanged: updateTheQnNum,
                               itemCount: 30,
+
                               itemBuilder: (context, index) => (
                                   // switch_man == true
                                   //     ? video_page_man(
@@ -553,6 +578,7 @@ class _video_Body extends State<video_Body> {
                                   video_page(
                                     id: widget.index,
                                   )
+
                               ),
                             ),
                             //child: youtube(context),
@@ -560,6 +586,7 @@ class _video_Body extends State<video_Body> {
                         ),
                       ],
                     ),
+
                   ],
                 ),
                 Semantics(
@@ -572,6 +599,7 @@ class _video_Body extends State<video_Body> {
                         0.341,
                     child: backcolor3(),
                   ),),
+
 
                 Stack(
                   children: [
@@ -591,6 +619,7 @@ class _video_Body extends State<video_Body> {
                                 children: <Widget>[
                                   Semantics(
                                     label: "받아쓰기 노트",
+
                                     child: Container(
                                       decoration: BoxDecoration(
                                           color: Colors.grey[200],
@@ -620,6 +649,7 @@ class _video_Body extends State<video_Body> {
                                             Text("다시", style: TextStyle(height: 0.2.h,fontSize: 10.sp,color: Colors.black), textAlign: TextAlign.center),
                                           ],
                                         ),)
+
                                   ),
                                   Container(
                                     margin: const EdgeInsets.only(left: 30, right: 30,),
@@ -640,9 +670,11 @@ class _video_Body extends State<video_Body> {
                             color: Colors.grey[200],
                             child: Semantics(
                                 label: "성량 확인 바",
+
                                 child: Container(
                                   alignment: Alignment.center,
                                   child: Noise(),)
+
                             ),
                           ),
                         ),
@@ -700,6 +732,7 @@ class _video_Body extends State<video_Body> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+
         Semantics(
           label: "",
           child: Column(
@@ -842,6 +875,7 @@ class _video_Body extends State<video_Body> {
                       )
                   )
                 ])
+
         )],
     );
   }
@@ -1030,6 +1064,7 @@ class _video_Body extends State<video_Body> {
       Fluttertoast.showToast(msg: "마이크 사용을 허용해주세요");
     }
   }
+
 
   void reset() {
 

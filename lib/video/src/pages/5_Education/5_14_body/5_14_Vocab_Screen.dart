@@ -7,7 +7,7 @@ import 'package:mirinae_gugu/video/src/widget/learn_level_button_f.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../1_Loading.dart';
 import '5_14_video_body.dart';
-// import 'package:mirinae_gugu/video/src/pages/5_Education/5_13_body/5_13_video_body.dart';
+
 
 
 class Vocab_Screen_514 extends StatefulWidget {
@@ -19,10 +19,12 @@ class _Vocab_Screen_51 extends State<Vocab_Screen_514>{
   List<bool> FavoriteButtons = <bool>[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
   List<String> FavoriteButton = ["false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false","false"];
 
+
   Future<void> loadFavorite() async{
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState((){
       FavoriteButtons = (prefs.getStringList("favorite_13_") ?? <bool>[]).map((value) => value == 'true').toList();
+
     });
 
   }
@@ -43,6 +45,7 @@ class _Vocab_Screen_51 extends State<Vocab_Screen_514>{
     return Scaffold(
         appBar: DefaultAppBar(title: '낱말학습'),
         body: Center(
+
             child: Scrollbar(
 
                 child: ListView(
@@ -394,6 +397,7 @@ class _Vocab_Screen_51 extends State<Vocab_Screen_514>{
                     ]
                 )
             )
+
         )
     );
 
