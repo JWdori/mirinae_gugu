@@ -34,7 +34,10 @@ dependencies:
   #cloud_firestore: ^0.13.6
   font_awesome_flutter: ^9.1.0
   #google_sign_in: ^4.4.6
+
+  #이거임
   shared_preferences: ^2.0.7
+
   flutter_signin_button: ^2.0.0
   # Add the dependency for the FlutterFire plugin for Google Analytics
   #  firebase_analytics: ^5.0.2

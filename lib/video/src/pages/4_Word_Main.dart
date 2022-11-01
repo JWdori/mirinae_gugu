@@ -14,7 +14,7 @@ class Word_Main extends StatelessWidget{
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Scrollbar(// <- Scaffold body만 감싼다.
+        child: Scrollbar(    // <- Scaffold body만 감싼다.
           child: ListView(
             padding: EdgeInsets.all(10),
             children: [
