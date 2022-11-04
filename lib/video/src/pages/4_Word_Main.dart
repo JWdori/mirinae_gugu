@@ -1,3 +1,4 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,6 +15,7 @@ class Word_Main extends StatelessWidget{
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
+
         child: Scrollbar(    // <- Scaffold body만 감싼다.
           child: ListView(
             padding: EdgeInsets.all(10),
@@ -36,10 +38,9 @@ class Word_Main extends StatelessWidget{
               ButtonChapter(onTap: Vocab_Screen_513(), number: 13, text: '외래어'),
               ButtonChapter(onTap: Vocab_Screen_514(), number: 14, text: '문장(1)'),
               ButtonChapter(onTap: Vocab_Screen_515(), number: 15, text: '문장(2)')
-
-            ],
-          ),
-        ),),
+],
+        ),
+      ),),
       appBar: DefaultAppBar(title: '구구절절'),
     );
   }

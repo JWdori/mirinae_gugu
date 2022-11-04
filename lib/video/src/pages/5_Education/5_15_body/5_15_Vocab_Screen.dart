@@ -7,7 +7,7 @@ import 'package:mirinae_gugu/video/src/widget/learn_level_button_f.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../1_Loading.dart';
 import '5_15_video_body.dart';
-// import 'package:mirinae_gugu/video/src/pages/5_Education/5_13_body/5_13_video_body.dart';
+
 
 
 class Vocab_Screen_515 extends StatefulWidget {
@@ -40,6 +40,7 @@ class _Vocab_Screen_51 extends State<Vocab_Screen_515>{
     return Scaffold(
         appBar: DefaultAppBar(title: '낱말학습'),
         body: Center(
+
             child: Scrollbar(
 
                 child: ListView(
@@ -391,6 +392,7 @@ class _Vocab_Screen_51 extends State<Vocab_Screen_515>{
                     ]
                 )
             )
+
         )
     );
 
