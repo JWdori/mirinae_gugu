@@ -24,6 +24,8 @@ import 'package:mirinae_gugu/video/src/pages/6_record/6_audio_recorder.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:permission_handler/permission_handler.dart';
 
+//import 'package:mirinae_gugu/video/src/pages/5_Education/5_14_body/5_14_pageview_man.dart';
+
 
 
 
@@ -150,9 +152,14 @@ class _video_Body extends State<video_Body> {
     '28. 산책 중이야',
     '29. 생일 축하해',
     '30. 새해 복 많이 받으세요'
-
-
   ];
+
+  final List<String> gender_items = [
+    '여자1',
+    '남자1',
+  ];
+  String? selectedValue;
+
 
   //record
   late Directory? appDir;
@@ -405,7 +412,6 @@ class _video_Body extends State<video_Body> {
     }
   }
 
-
   var height2 = AppBar().preferredSize.height;
   bool val = false;
 
@@ -498,35 +504,37 @@ class _video_Body extends State<video_Body> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
+                Container(
+                color: Colors.white,
+                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+                ),
+
+                    // Semantics(
+                    //   label: "남자 전원 버튼",
+                    //   child: FlutterSwitch(
+                    //     activeText: "남자",
+                    //     inactiveText: "여자",
+                    //     activeColor: Colors.blue,
+                    //     value: switch_man,
+                    //     valueFontSize: 13.0.sp,
+                    //     inactiveTextColor: Colors.black87,
+                    //     inactiveToggleColor: Colors.white70,
+                    //     activeTextColor:Colors.white,
+                    //     inactiveTextFontWeight: FontWeight.w500,
+                    //     activeTextFontWeight: FontWeight.w500,
+                    //     width: 83.w,
+                    //     borderRadius: 28.0,
+                    //     showOnOff: true,
+                    //     onToggle: (switch_man) {
+                    //       setState(() {
+                    //         switch_man = onChangeMethod_man(switch_man);
+                    //       });
+                    //     },
+                    //   ),
+                    //
+                    // )
 
 
-                    Semantics(
-                      label: "남자 전원 버튼",
-                      child: FlutterSwitch(
-                        activeText: "남자",
-                        inactiveText: "여자",
-                        activeColor: Colors.blue,
-                        value: switch_man,
-                        valueFontSize: 13.0.sp,
-
-                        inactiveTextColor: Colors.black87,
-                        inactiveToggleColor: Colors.white70,
-                        activeTextColor:Colors.white,
-                        inactiveTextFontWeight: FontWeight.w500,
-                        activeTextFontWeight: FontWeight.w500,
-
-                        width: 83.w,
-                        borderRadius: 28.0,
-                        showOnOff: true,
-                        onToggle: (switch_man) {
-                          setState(() {
-                            switch_man = onChangeMethod_man(switch_man);
-                          });
-                        },
-                      ),
-
-
-                    )
                   ],
 
                 )
@@ -574,7 +582,7 @@ class _video_Body extends State<video_Body> {
                                   //     ? video_page_man(
                                   //   id: widget.index,
                                   // )
-                                  //   :
+                                  //     :
                                   video_page(
                                     id: widget.index,
                                   )

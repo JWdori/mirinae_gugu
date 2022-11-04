@@ -506,35 +506,38 @@ class _video_Body extends State<video_Body> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
+                    Container(
+                      color: Colors.white,
+                      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+                    ),
+
+                    // Semantics(
+                    //   label: "남자 전원 버튼",
+                    //   child: FlutterSwitch(
+                    //     activeText: "남자",
+                    //     inactiveText: "여자",
+                    //     activeColor: Colors.blue,
+                    //     value: switch_man,
+                    //     valueFontSize: 13.0.sp,
+                    //     inactiveTextColor: Colors.black87,
+                    //     inactiveToggleColor: Colors.white70,
+                    //     activeTextColor:Colors.white,
+                    //     inactiveTextFontWeight: FontWeight.w500,
+                    //     activeTextFontWeight: FontWeight.w500,
+                    //     width: 83.w,
+                    //     borderRadius: 28.0,
+                    //     showOnOff: true,
+                    //     onToggle: (switch_man) {
+                    //       setState(() {
+                    //         switch_man = onChangeMethod_man(switch_man);
+                    //       });
+                    //     },
+                    //   ),
+                    //
+                    // )
 
 
-                    Semantics(
-                      label: "남자 전원 버튼",
-                      child: FlutterSwitch(
-                        activeText: "남자",
-                        inactiveText: "여자",
-                        activeColor: Colors.blue,
-                        value: switch_man,
-                        valueFontSize: 13.0.sp,
 
-                        inactiveTextColor: Colors.black87,
-                        inactiveToggleColor: Colors.white70,
-                        activeTextColor:Colors.white,
-                        inactiveTextFontWeight: FontWeight.w500,
-                        activeTextFontWeight: FontWeight.w500,
-
-                        width: 83.w,
-                        borderRadius: 28.0,
-                        showOnOff: true,
-                        onToggle: (switch_man) {
-                          setState(() {
-                            switch_man = onChangeMethod_man(switch_man);
-                          });
-                        },
-                      ),
-
-
-                    )
                   ],
 
                 )
