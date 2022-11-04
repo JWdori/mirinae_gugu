@@ -486,7 +486,10 @@ class _video_Body extends State<video_Body> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-
+                Container(
+                color: Colors.white,
+                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+                ),
 
                     // Semantics(
                     //   label: "남자 전원 버튼",
