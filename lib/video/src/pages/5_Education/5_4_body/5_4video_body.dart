@@ -310,7 +310,7 @@ class _video_Body extends State<video_Body_4> {
   Future<void> loadFavorite() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      favorite = (prefs.getStringList("favorite_1_") ?? <bool>[])
+      favorite = (prefs.getStringList("favorite_4") ?? <bool>[])
           .map((value) => value == 'true')
           .toList();
     });
@@ -336,10 +336,10 @@ class _video_Body extends State<video_Body_4> {
       });
     }
     await prefs.setStringList(
-        "favorite_1_", favorite.map((value) => value.toString()).toList());
+        "favorite_4", favorite.map((value) => value.toString()).toList());
     if (mounted) {
       setState(() {
-        favorite = (prefs.getStringList("favorite_1_") ?? <bool>[])
+        favorite = (prefs.getStringList("favorite_4") ?? <bool>[])
             .map((value) => value == 'true')
             .toList();
 
@@ -347,8 +347,8 @@ class _video_Body extends State<video_Body_4> {
   }
 
   void plus() async {
-    if (widget.index != 31) {
-      if (widget.index == 30) {
+    if (widget.index != 29) {
+      if (widget.index == 28) {
         setState(() {
           start = true;
         });
@@ -363,12 +363,12 @@ class _video_Body extends State<video_Body_4> {
   }
 
   void backplusload() async {
-    if (widget.index != 31) {
+    if (widget.index != 29) {
       if (widget.index == 1) {
         setState(() {
           finish = true;
         });
-      } else if (widget.index == 30) {
+      } else if (widget.index == 28) {
         setState(() {
           start = true;
         });
@@ -377,7 +377,7 @@ class _video_Body extends State<video_Body_4> {
   }
 
   void back() async {
-    if (widget.index != 31) {
+    if (widget.index != 29) {
       if (widget.index == 1) {
         setState(() {
           finish = true;
@@ -478,8 +478,8 @@ class _video_Body extends State<video_Body_4> {
                     Semantics(
                       label: "남자 전원 버튼",
                       child: FlutterSwitch(
-                        activeText: "여자 on",
-                        inactiveText: "남자 on",
+                        activeText: "남자",
+                        inactiveText: "여자",
                         activeColor: Colors.blue,
                         value: switch_man,
                         valueFontSize: 13.0.sp,
@@ -537,7 +537,7 @@ class _video_Body extends State<video_Body_4> {
                               physics: NeverScrollableScrollPhysics(),
                               controller: _pageController,
                               onPageChanged: updateTheQnNum,
-                              itemCount: 30,
+                              itemCount: 28,
                               itemBuilder: (context, index) => (
                                   switch_man == true
                                       ? video_page_man(

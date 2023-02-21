@@ -26,6 +26,18 @@ class _NotificationState extends State<Notific> {
           SizedBox(height: 0.5),
           Divider(color: Colors.white, thickness: 0.8),
           NotificationTiles(
+            title: '1.0.1+9 공지사항입니다.',
+            content:
+            '\n1~13단원 남자버전 영상과 문장 학습 14,15단원이 추가되었습니다.\n'
+                '\n남자버전의 경우, 촬영 배우가 구해지지 않아 급하게 촬영하여 앞에 영상에 비해 질적으로 부족한 점 양해바랍니다.\n'
+                '\n또한, 체크 기호가 불필요하다는 평이 많아 낱말 학습에서 해당 기호를 삭제처리 하였고, 일부 아이콘이 수정되었습니다.\n'
+                '\n오류 신고 및 문의는 jaewan0114@hanyang.ac.kr으로 부탁드립니다.\n'
+                '\n부족한 어플을 이용해주셔서 감사합니다.\n\n',
+            date: '2022.11.05',
+            enable: true,
+          ),
+          kDivider,
+          NotificationTiles(
             title: '1.0.1+5 공지사항입니다.',
             content:
             '\n최근 리뷰 이벤트를 진행하였고, 피드백을 정리중에 있습니다.\n'

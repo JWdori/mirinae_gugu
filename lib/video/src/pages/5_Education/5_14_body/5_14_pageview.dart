@@ -35,7 +35,7 @@ class _5_video_page extends State<video_page>{
   List asd = [
     'vxKZCjvTN7s',
     'MOhijAIabE8',
-    '-AzR8JibFfaI',
+    'AzR8JibFfaI',
     '3xpCujChBRU',
     'iRVlsarIAkg',
     'M9Jswm_mUr4',
