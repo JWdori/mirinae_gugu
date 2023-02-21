@@ -14,7 +14,7 @@ class _Noise extends State<StatefulWidget> {
   StreamSubscription<NoiseReading>? subscription;
 
   final int limitDecibel = 90;
-  int minlimitDecibel =30;
+  int minlimitDecibel = 30;
   int currentDecibel = 0;
   double a = 0;
 
