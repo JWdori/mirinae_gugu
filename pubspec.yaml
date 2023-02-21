@@ -135,6 +135,9 @@ flutter:
     - assets/test_chapter/11_winter.png
     - assets/test_chapter/12_family.png
     - assets/test_chapter/13_foreign.png
+    - assets/test_chapter/14_sentence1.jpeg
+    - assets/test_chapter/15_sentence2.jpeg
+
     - assets/test_achievement/bad.png
     - assets/test_achievement/good.png
     - assets/test_achievement/success.png

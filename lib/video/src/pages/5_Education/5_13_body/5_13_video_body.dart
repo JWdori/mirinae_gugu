@@ -494,18 +494,19 @@ class _video_Body extends State<video_Body> {
 
                     Semantics(
                       label: "남자 전원 버튼",
-                      child: FlutterSwitch(
+                      child:
+                      FlutterSwitch(
                         activeText: "남자",
                         inactiveText: "여자",
                         activeColor: Colors.blue,
                         value: switch_man,
-                        valueFontSize: 13.0.sp,
+                        valueFontSize: 15.0.sp,
                         inactiveTextColor: Colors.black87,
                         inactiveToggleColor: Colors.white70,
                         activeTextColor:Colors.white,
                         inactiveTextFontWeight: FontWeight.w500,
                         activeTextFontWeight: FontWeight.w500,
-                        width: 83.w,
+                        width: 73.w,
                         borderRadius: 28.0,
                         showOnOff: true,
                         onToggle: (switch_man) {
@@ -513,9 +514,11 @@ class _video_Body extends State<video_Body> {
                             switch_man = onChangeMethod_man(switch_man);
                           });
                         },
+
                       ),
 
-                    )
+                    ),
+
                   ],
 
                 )
