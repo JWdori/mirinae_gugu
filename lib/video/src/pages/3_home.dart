@@ -217,6 +217,20 @@ class _Home extends State<Home> {
         s.setBool("speaking13_2", false);
         s.setBool("speaking13_3", false);
 
+        s.setBool("reading14_1", false);
+        s.setBool("reading14_2", false);
+        s.setBool("reading14_3", false);
+        s.setBool("speaking14_1", false);
+        s.setBool("speaking14_2", false);
+        s.setBool("speaking14_3", false);
+
+        s.setBool("reading15_1", false);
+        s.setBool("reading15_2", false);
+        s.setBool("reading15_3", false);
+        s.setBool("speaking15_1", false);
+        s.setBool("speaking15_2", false);
+        s.setBool("speaking15_3", false);
+
         prefs.setInt('fontchoose', 1);
         ss.setString('fontsize', "보통");
         //조음학습
