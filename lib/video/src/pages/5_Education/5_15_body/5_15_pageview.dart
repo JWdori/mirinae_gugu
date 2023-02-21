@@ -12,6 +12,7 @@ class video_page extends StatefulWidget {
   @override
   _5_video_page createState() => _5_video_page();
 }
+
 class _5_video_page extends State<video_page>{
 
   late final YoutubePlayerController _controller;
@@ -21,10 +22,9 @@ class _5_video_page extends State<video_page>{
     _controller = YoutubePlayerController(
 
       initialVideoId: asd[widget.id-1],
-
       flags: YoutubePlayerFlags(
         hideThumbnail: true,
-        //isLive: true,
+
         autoPlay: false,
         controlsVisibleAtStart: false,
         useHybridComposition: false,
@@ -65,6 +65,7 @@ class _5_video_page extends State<video_page>{
     'mgYt5AOAxTQ',
     'ujPu5FB3NNs',
     'LuYeaXWnV08'
+
   ];
 
   @override

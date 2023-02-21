@@ -53,7 +53,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                         children: <Widget>[
                           LearnLevelButton(
                               state: FavoriteButtons[1],
-                              text: FavoriteButtons[1] ? "2-1 ✔" : '2-1',
+                              text: FavoriteButtons[1] ? "2-1" : '2-1',
                               onTap: () async {
                                 await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                   index:1,
@@ -62,7 +62,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                           ),
                           LearnLevelButton(
                             state: FavoriteButtons[2],
-                            text: FavoriteButtons[2] ? '2-2 ✔' : '2-2',
+                            text: FavoriteButtons[2] ? '2-2' : '2-2',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 2,
@@ -71,7 +71,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                           ),
                           LearnLevelButton(
                             state: FavoriteButtons[3],
-                            text: FavoriteButtons[3] ? '2-3 ✔' : '2-3',
+                            text: FavoriteButtons[3] ? '2-3' : '2-3',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 3,
@@ -86,7 +86,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                         children: <Widget>[
                           LearnLevelButton(
                             state: FavoriteButtons[4],
-                            text: FavoriteButtons[4] ? '2-4 ✔' : '2-4',
+                            text: FavoriteButtons[4] ? '2-4' : '2-4',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 4,
@@ -95,7 +95,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                           ),
                           LearnLevelButton(
                             state: FavoriteButtons[5],
-                            text: FavoriteButtons[5] ? '2-5 ✔' : '2-5',
+                            text: FavoriteButtons[5] ? '2-5' : '2-5',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 5,
@@ -104,7 +104,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                           ),
                           LearnLevelButton(
                             state: FavoriteButtons[6],
-                            text: FavoriteButtons[6] ? '2-6 ✔' : '2-6',
+                            text: FavoriteButtons[6] ? '2-6' : '2-6',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 6,
@@ -118,7 +118,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                         children: <Widget>[
                           LearnLevelButton(
                             state: FavoriteButtons[7],
-                            text: FavoriteButtons[7] ? '2-7 ✔' : '2-7',
+                            text: FavoriteButtons[7] ? '2-7' : '2-7',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 7,
@@ -127,7 +127,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                           ),
                           LearnLevelButton(
                             state: FavoriteButtons[8],
-                            text: FavoriteButtons[8] ? '2-8 ✔' : '2-8',
+                            text: FavoriteButtons[8] ? '2-8' : '2-8',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 8,
@@ -136,7 +136,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                           ),
                           LearnLevelButton(
                             state: FavoriteButtons[9],
-                            text: FavoriteButtons[9] ? '2-9 ✔' : '2-9',
+                            text: FavoriteButtons[9] ? '2-9' : '2-9',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 9,
@@ -150,7 +150,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                         children: <Widget>[
                           LearnLevelButton(
                             state: FavoriteButtons[10],
-                            text: FavoriteButtons[10] ? '2-10 ✔' : '2-10',
+                            text: FavoriteButtons[10] ? '2-10' : '2-10',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 10,
@@ -160,7 +160,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
 
                           LearnLevelButton(
                             state: FavoriteButtons[11],
-                            text: FavoriteButtons[11] ? '2-11 ✔' : '2-11',
+                            text: FavoriteButtons[11] ? '2-11' : '2-11',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 11,
@@ -169,7 +169,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                           ),
                           LearnLevelButton(
                             state: FavoriteButtons[12],
-                            text: FavoriteButtons[12] ? '2-12 ✔' : '2-12',
+                            text: FavoriteButtons[12] ? '2-12' : '2-12',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 12,
@@ -185,7 +185,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                         children: <Widget>[
                           LearnLevelButton(
                             state: FavoriteButtons[13],
-                            text: FavoriteButtons[13] ? '2-13 ✔' : '2-13',
+                            text: FavoriteButtons[13] ? '2-13' : '2-13',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 13,
@@ -194,7 +194,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                           ),
                           LearnLevelButton(
                             state: FavoriteButtons[14],
-                            text: FavoriteButtons[14] ? '2-14 ✔' : '2-14',
+                            text: FavoriteButtons[14] ? '2-14' : '2-14',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 14,
@@ -203,7 +203,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                           ),
                           LearnLevelButton(
                             state: FavoriteButtons[15],
-                            text: FavoriteButtons[15] ? '2-15 ✔' : '2-15',
+                            text: FavoriteButtons[15] ? '2-15' : '2-15',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 15,
@@ -219,7 +219,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                         children: <Widget>[
                           LearnLevelButton(
                             state: FavoriteButtons[16],
-                            text: FavoriteButtons[16] ? '2-16 ✔' : '2-16',
+                            text: FavoriteButtons[16] ? '2-16' : '2-16',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 16,
@@ -228,7 +228,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                           ),
                           LearnLevelButton(
                             state: FavoriteButtons[17],
-                            text: FavoriteButtons[17] ? '2-17 ✔' : '2-17',
+                            text: FavoriteButtons[17] ? '2-17' : '2-17',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 17,
@@ -237,7 +237,7 @@ class _Vocab_Screen_52 extends State<Vocab_Screen_52>{
                           ),
                           LearnLevelButton(
                             state: FavoriteButtons[18],
-                            text: FavoriteButtons[18] ? '2-18 ✔' : '2-18',
+                            text: FavoriteButtons[18] ? '2-18' : '2-18',
                             onTap: () async {
                               await Navigator.push(context, MaterialPageRoute(builder: (context) => video_Body_2(
                                 index: 18,

@@ -70,6 +70,7 @@ class _video_Body extends State<video_Body> {
     "false",
     "false",
     "false"
+
   ];
   bool finish = false;
   List<bool> favorite = <bool>[
@@ -104,6 +105,7 @@ class _video_Body extends State<video_Body> {
     false,
     false,
     false
+
   ];
   CameraController controller =
   CameraController(cameras[1], ResolutionPreset.veryHigh);
@@ -149,7 +151,6 @@ class _video_Body extends State<video_Body> {
   '28. 회의 중입니다',
   '29. 휴대폰 배터리가 없어',
   '30. 혹시 휴지 있어?'
-
 
 
   ];

@@ -44,7 +44,7 @@ class Login extends StatelessWidget{
         designSize: Size(411.4, 866.3),
         minTextAdapt: true,
         splitScreenMode: true,
-        builder: () => GetMaterialApp(
+        builder: (_,child) => GetMaterialApp(
           debugShowCheckedModeBanner: false,
           title: '구구절절',
           theme: ThemeData(

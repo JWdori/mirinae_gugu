@@ -352,12 +352,15 @@ class _video_Body extends State<video_Body> {
     await prefs.setStringList(
         "favorite_13_", favorite.map((value) => value.toString()).toList());
     if (mounted) {
-      setState(() {
-        favorite = (prefs.getStringList("favorite_13_") ?? <bool>[])
-            .map((value) => value == 'true')
-            .toList();
 
-      });}
+
+    setState(() {
+      favorite = (prefs.getStringList("favorite_13_") ?? <bool>[])
+          .map((value) => value == 'true')
+          .toList();
+    });
+    }
+
   }
 
   void plus() async {
