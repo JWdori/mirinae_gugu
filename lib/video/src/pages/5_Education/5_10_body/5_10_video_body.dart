@@ -249,7 +249,7 @@ class _video_Body extends State<video_Body> {
       //서비스 계정. assets 폴더에 api key 넣음
       final serviceAccount = ServiceAccount.fromString(
           '${(await rootBundle.loadString(
-              'assets/lejinhy-speech-to-text-11be68205205.json'))}');
+              'assets/service_name.json'))}');
       final speechToText = SpeechToText.viaServiceAccount(serviceAccount);
       final config = _getConfig();
 
