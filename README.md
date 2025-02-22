@@ -1,9 +1,9 @@
 # 구구절절(Gugu-Jeoljeol) - 구화 교육 애플리케이션
 
-Gugu-Jeoljeol is a Korean lip-reading education application developed as part of the Barrier-Free App Development Contest. Designed specifically for the hearing-impaired, the app aims to improve Korean lip-reading skills through a user-friendly learning system built under the guidance of a lipreading expert for the hearing impaired.
+Gugu-Jeoljeol is a Korean lip-reading education application developed as part of the "2021 Barrier-Free App Development Contest". Designed specifically for the hearing-impaired, the app aims to improve Korean lip-reading skills through a user-friendly learning system built under the guidance of a lipreading expert for the hearing impaired.
 
 The application includes **600+** data(2 ~ 5s video) examples covering both Korean lip movements and vocabulary. 
-It also offers functionalities such as phonetic symbols, dictation(google Speech-to-text), recording, and front camera support.
+It also offers functionalities such as phonetic symbols, dictation(google Speech-to-text), Voice loudness check, recording, and front camera support.
 
 ### Features
 - Articulation Training: Learn pronunciation through detailed articulation videos combined with STT.
