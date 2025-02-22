@@ -20,7 +20,7 @@ It also offers functionalities such as phonetic symbols, dictation(google Speech
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8f35a273-96fd-46a2-8df5-3414f145e893" alt="Image 4" width="200" />
+  <img src = "https://github.com/user-attachments/assets/ee58321f-5e8a-4d9d-b742-1acbfb2aad1e" alt="Image 5" width="200" />
   <img src="https://github.com/user-attachments/assets/f4d33595-f81d-4749-92be-42b0a22651a9" alt="Image 5" width="200" />
   <img src="https://github.com/user-attachments/assets/80745f90-372b-44c6-8498-1e3470034f75" alt="Image 6" width="200" />
     <img src="https://github.com/user-attachments/assets/ad4ce5bb-8ac3-45af-8590-5c695020610c" alt="Image 8" width="200" />
