@@ -1,4 +1,4 @@
-# 구구절절(Gugu-Jeoljeol) - 구화 교육 애플리케이션
+# 구구절절(Gugu-Jeoljeol) - 청각장애인 구화 교육 애플리케이션
 
 Gugu-Jeoljeol is a Korean lip-reading education application developed as part of the "2021 Barrier-Free App Development Contest". Designed specifically for the hearing-impaired, the app aims to improve Korean lip-reading skills through a user-friendly learning system built under the guidance of a lipreading expert for the hearing impaired.
 
